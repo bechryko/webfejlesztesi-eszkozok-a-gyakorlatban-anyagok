@@ -1,0 +1,1 @@
+header>nav>h1{Beautiful website}+a*6{Menu $}^^main>.column-container>.column*3>h2+p.subtitle+p>lorem20^img[alt="image"]^^button*2^footer>table>tr>th*2^tr*3>td*2^^span.best-wishes{Best wishes to all visitors!}

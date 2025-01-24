@@ -1,0 +1,2 @@
+Az alap HTML-t legeneráló Emmet utasítás után keress egy olyan Emmet utasítást, amivel az index.html-ben lévő kódot generálod!
+Példamegoldást a megoldas mappában találsz!
