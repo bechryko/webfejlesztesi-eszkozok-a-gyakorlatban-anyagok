@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(15rem, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.card {
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 1px solid lightgray;
+}
+
+.card:nth-child(1) {
+    background-color: hsl(from rebeccapurple h s 14%);
+    color: white;
+}
+
+.card:nth-child(2) {
+    background-color: hsl(from rebeccapurple h s 23%);
+    color: white;
+}
+
+.card:nth-child(3) {
+    background-color: hsl(from rebeccapurple h s 32%);
+    color: white;
+}
+
+.card:nth-child(4) {
+    background-color: hsl(from rebeccapurple h s 41%);
+}
+
+.card:nth-child(5) {
+    background-color: hsl(from rebeccapurple h s 50%);
+}
+
+.card:nth-child(6) {
+    background-color: hsl(from rebeccapurple h s 59%);
+}
+
+.card:nth-child(7) {
+    background-color: hsl(from rebeccapurple h s 68%);
+}
+
+.card:nth-child(8) {
+    background-color: hsl(from rebeccapurple h s 77%);
+}
+
+.card:nth-child(9) {
+    background-color: hsl(from rebeccapurple h s 86%);
+}
+
+.card:nth-child(10) {
+    background-color: hsl(from rebeccapurple h s 95%);
+}
+
+.card img {
+    float: left;
+    margin-right: 1.5rem;
+    border: 1px solid lightgray;
+    border-radius: 1rem;
+    box-sizing: border-box;
+}
+
+.card h2 {
+    margin-top: 0;
+}
