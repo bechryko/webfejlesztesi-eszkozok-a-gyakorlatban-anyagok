@@ -1,0 +1,44 @@
+// Ugyanolyan mint a SASS, csak visszatérnek a CSS-ből ismert kapcsos zárójelek és pontosvesszők
+
+$spacing: 2rem;
+$main-card-color: rebeccapurple;
+$border: 1px solid lightgray;
+
+body {
+    margin: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(15rem, 1fr));
+    gap: 1rem;
+    padding: $spacing;
+}
+
+.card {
+    padding: $spacing;
+    border-radius: $spacing;
+    border: $border;
+
+    @for $i from 0 to 10 {
+        &:nth-child(#{$i + 1}) {
+            background-color: hsl(from $main-card-color h s #{5% + $i * 10%});
+
+            @if $i < 4 {
+                color: white;
+            }
+        }
+    }
+
+    img {
+        float: left;
+        margin-right: 1.5rem;
+        border: $border;
+        border-radius: 1rem;
+        box-sizing: border-box;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+}

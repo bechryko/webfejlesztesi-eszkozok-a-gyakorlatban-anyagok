@@ -1,0 +1,59 @@
+// a sass:list-hez hasonlóan a map-ekhez hasznos függvények a sass:map-ben vannak
+@use 'sass:map';
+
+$spacing: 2rem;
+
+// map-ek létrehozása (kulcs-érték párok)
+$breakpoints: (
+    small: 40rem,
+    medium: 64rem,
+    large: 80rem
+);
+
+@mixin mq($key) {
+    // map.get függvény a map-ből kinyeri az értéket a megadott kulcs alapján
+    $breakpoint: map.get($breakpoints, $key);
+
+    // ha az adott kulccsal nincs érték a map-ben, null-t kapunk (ezt itt hibaként le lehet kezelni)
+    @if $breakpoint == null {
+        @error "Invalid breakpoint: #{$key}";
+    }
+
+    @media (min-width: $breakpoint) {
+        // plusz hasznos dolog mixin-ekhez: a @content segítségével lehet beilleszteni azokat a stílusokat, amiket a mixin törzsében megadunk
+        @content;
+    }
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    $gap: 1rem;
+
+    padding: $spacing;
+
+    & > *:not(:first-child) {
+        margin-top: $gap;
+    }
+
+    @include mq(small) {
+        // ez egy mixin, és a törzsében (akárcsak hagyományos CSS media query-kben) meg lehet adni stílusokat, amiket a mixinben a @content at-rule segítségével lehet kezelni
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+
+        & > *:not(:first-child) {
+            margin-top: 0;
+        }
+    }
+
+    @include mq(medium) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mq(large) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

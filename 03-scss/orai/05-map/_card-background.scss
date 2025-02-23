@@ -1,0 +1,8 @@
+@use 'sass:list';
+
+$card-color-list: rebeccapurple, darkorange, darkslateblue, darkolivegreen, darkgoldenrod, darkcyan, darkmagenta, darkturquoise, darkviolet, darksalmon;
+
+@function get-card-background-color($index) {
+    $color-base: list.nth($card-color-list, $index + 1);
+    @return hsl(from $color-base h s #{5% + $index * 10%});
+}

@@ -1,0 +1,12 @@
+$spacing: 2rem;
+
+body {
+    margin: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(15rem, 1fr));
+    gap: 1rem;
+    padding: $spacing;
+}

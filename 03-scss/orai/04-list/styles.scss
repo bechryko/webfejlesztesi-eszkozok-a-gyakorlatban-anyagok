@@ -1,0 +1,28 @@
+@use './border-style';
+@use './general-styles' as *;
+@use './card-background';
+
+.card {
+    padding: $spacing;
+    @include border-style.light-gray-border;
+
+    @for $i from 0 to 10 {
+        &:nth-child(#{$i + 1}) {
+            background-color: card-background.get-card-background-color($i);
+
+            @if $i < 4 {
+                color: white;
+            }
+        }
+    }
+
+    img {
+        float: left;
+        margin-right: 1.5rem;
+        @include border-style.light-gray-border(1rem, $border-box: on);
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+}

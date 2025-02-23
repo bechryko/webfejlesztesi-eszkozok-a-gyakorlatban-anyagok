@@ -1,0 +1,14 @@
+// A fájl neve előtti _ jelzi, hogy ez egy "partial" forrásfájl, azaz nem kell lefordítani külön CSS fájlba, mert a fő SCSS fájl (styles.scss) használja
+
+$spacing: 2rem;
+
+body {
+    margin: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(15rem, 1fr));
+    gap: 1rem;
+    padding: $spacing;
+}

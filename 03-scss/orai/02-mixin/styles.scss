@@ -1,0 +1,59 @@
+$spacing: 2rem;
+
+// A mixinek hasonlóak a függvényekhez: több stílust lehet egy helyen definiálni, és azt később újra felhasználni, akár paraméterekkel is
+@mixin light-gray-border($radius: 2rem, $border-box: off) {
+    // A paraméterek alapértelmezett értékeket is kaphatnak; a paraméterek értéke bármi lehet, csak ha valami speciális értéket használunk, akkor azt később érdemes lehet lekezelni
+    border: 1px solid lightgray;
+    border-radius: $radius;
+
+    @if $border-box == on {
+        box-sizing: border-box;
+    } @else if $border-box != off {
+        @error "Invalid value for $border-box: #{$border-box}";
+    }
+}
+
+// Függvényeket is definiálhatunk, amik egy konkrét értéket adnak vissza
+@function get-card-background-color($index) {
+    @return hsl(from rebeccapurple h s #{5% + $index * 10%});
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(15rem, 1fr));
+    gap: 1rem;
+    padding: $spacing;
+}
+
+.card {
+    padding: $spacing;
+    // A mixin használata; paraméter nélkül nem kell kiírni a zárójelpárt (nem úgy mint pl. egy hagyományos programozási nyelvben függvényhíváskor)
+    @include light-gray-border;
+
+    @for $i from 0 to 10 {
+        &:nth-child(#{$i + 1}) {
+            // A függvényeket úgy kell használni mint a hagyományos CSS függvényeket
+            background-color: get-card-background-color($i);
+
+            @if $i < 4 {
+                color: white;
+            }
+        }
+    }
+
+    img {
+        float: left;
+        margin-right: 1.5rem;
+        // A mixin használata paraméterrel
+        // Meg is adhatjuk a paraméter nevét, ilyen esetben nem kell a paraméterek sorrendjére figyelni
+        @include light-gray-border(1rem, $border-box: on);
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+}

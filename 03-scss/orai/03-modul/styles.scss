@@ -1,0 +1,35 @@
+// Stílusok beimportálása másik fájlból
+@use './border-style';
+@use './general-styles' as *;
+// Az 'as *' segítségével namespace megadása nélkül is használhatjuk a beimportált mixineket, változókat, stb.
+
+@function get-card-background-color($index) {
+    @return hsl(from rebeccapurple h s #{5% + $index * 10%});
+}
+
+.card {
+    // Ha másik fájlból használunk mixint, akkor elé kell írni a namespace-ét, ami alapból a fájl neve (de megváltoztatható az 'as' kulcsszóval)
+    @include border-style.light-gray-border;
+    // Beimportált fájlokból változókat is használhatunk (az 'as *' miatt ide nem kell kiírni a namespace-t)
+    padding: $spacing;
+
+    @for $i from 0 to 10 {
+        &:nth-child(#{$i + 1}) {
+            background-color: get-card-background-color($i);
+
+            @if $i < 4 {
+                color: white;
+            }
+        }
+    }
+
+    img {
+        float: left;
+        margin-right: 1.5rem;
+        @include border-style.light-gray-border(1rem, $border-box: on);
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+}
