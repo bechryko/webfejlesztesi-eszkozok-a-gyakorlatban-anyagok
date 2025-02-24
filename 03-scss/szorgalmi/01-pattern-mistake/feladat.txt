@@ -1,0 +1,7 @@
+Írd meg a "first-mistake" függvényt, mely egy számot és egy listát vár paraméterül. A szám az ismétlődő minta hosszát jelzi, a lista (ami méretekből áll) pedig a minta elemeit tartalmazza. A függvény adja vissza az első hiba helyét, azaz azt a helyet, ahol a minta nem egyezik az ismétlődő sormintával. Ha nincs hiba, akkor a visszatérési érték legyen 0. (Figyelj rá, hogy az SCSS 1-től indexeli a listát!) Feltételezhetjük, hogy a szám legalább 1, és a lista hossza legalább annyi, mint a szám.
+
+Függvényhívás: first-mistake(3, (1px 2rem 100% 1px 2rem 100% auto 2rem 100%))
+Visszatérési érték: 7 
+Magyarázat: auto helyett 1px-nek kellene ott lennie, hogy jó legyen a minta
+
+Szerezhető pluszpont: 1

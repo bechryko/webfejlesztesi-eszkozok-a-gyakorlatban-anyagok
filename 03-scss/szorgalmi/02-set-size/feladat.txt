@@ -1,0 +1,5 @@
+Írj egy "set-size" mixin-t, ami két paraméterrel rendelkezik: egy szöveggel, ami lehet "height" vagy "width" (más paraméter esetében hibát kell dobni), és egy listával, ami a méreteket tartalmazza. A mixin a megfelelő tulajdonságot állítja be a listában lévő értékek összegére.
+
+Példa: @include set-size(height, (10px, -3rem, 100%));
+
+Szerezhető pluszpont: 1
