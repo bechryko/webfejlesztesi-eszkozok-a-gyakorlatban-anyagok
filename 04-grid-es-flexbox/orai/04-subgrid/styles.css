@@ -1,0 +1,59 @@
+body {
+   margin: 0;
+   justify-items: center;
+   background-color: rgb(42, 42, 42);
+}
+
+main {
+   width: 75%;
+   padding: 1rem;
+   background-color: beige;
+
+   display: grid;
+   gap: 1rem;
+   /* meghatározzuk az oszlopokat */
+   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+   /* mivel minden sornál jó nekünk az automatikus méret, nem kell csinálni semmit */
+   /* ha pl. a címsor méretét szeretnénk lefixálni 4rem-re, akkor ezt kellene írnunk: */
+   /*grid-auto-rows: 4rem auto auto;*/
+   /* címsor: 4rem, kép sora: auto, description: auto, majd ugyanez ismételve */
+}
+
+.card {
+   max-width: 20rem;
+   border: 1px solid black;
+   box-sizing: border-box;
+   border-radius: 0.5rem;
+   background-color: white;
+   overflow: hidden;
+
+   /* legyen minden kártya 3 sor magasságú (címsor, kép sora, description sora) */
+   grid-row: span 3;
+   /* legyen ez is grid */
+   display: grid;
+   /* és a varázslat: örökölje meg a szülő grid sorait: mivel 3 sor magas az elem, ezért ez a 3 sor belül is elérhető lesz */
+   grid-template-rows: subgrid;
+   /* nem szeretnénk, hogy itt legyen gap, ezért ki lehet kapcsolni */
+   /* ettől még a külső gridben lesznek gap-ek, valamint kicsit belerondítanak a belső méretekbe, de ha automatikus magasságokat használunk, nem lesz belőle baj */
+   gap: 0;
+
+   h2 {
+      background-color: bisque;
+      padding: 1rem;
+      margin: 0;
+      text-align: center;
+      font-size: 2rem;
+   }
+
+   img {
+      display: block;
+      margin: auto;
+   }
+
+   .description {
+      background-color: bisque;
+      padding: 1rem;
+      padding-bottom: auto;
+      margin: 0;
+   }
+}

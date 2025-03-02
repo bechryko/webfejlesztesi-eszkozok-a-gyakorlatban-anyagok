@@ -1,0 +1,21 @@
+body {
+   margin: 0;
+   padding: 2rem;
+}
+
+.flex-container {
+   outline: 1rem solid #f00;
+   /* height: 500px; */
+   margin-bottom: 30rem;
+}
+
+.flex-item {
+   background-color: green;
+   width: 100px;
+   height: 100px;
+   color: white;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 1rem;
+}
+
+/* END OF DEFAULT STYLES */

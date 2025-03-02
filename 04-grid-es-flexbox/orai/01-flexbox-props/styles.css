@@ -1,0 +1,98 @@
+body {
+   margin: 0;
+   padding: 2rem;
+}
+
+.flex-container {
+   outline: 1rem solid #f00;
+   height: 500px;
+   margin-bottom: 30rem;
+}
+
+.flex-item {
+   background-color: green;
+   width: 100px;
+   height: 100px;
+   color: white;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 1rem;
+}
+
+/* END OF DEFAULT STYLES */
+
+
+.flex-container.container-1 {
+   /* a property, aminek a segítségével az adott elem flex container lesz, a gyermekei pedig flex item-ek */
+   /* a gyermekek a main axis (főtengely) mentén kerülnek egymás mellé */
+   display: flex;
+
+   /* meghatározhatunk térközt a flex item-ek között, amik a legtöbbször sokat segítenek, hogy ne legyen túl zsúfolt az oldal */
+   gap: 1rem;
+
+   /* meg lehet változtatni a főtengely irányát: alapból ez a vízszintes tengely lesz (flex-direction: row), de az alábbi példában a függőleges */
+   /* továbbá az alap flex-direction értékeknek van fordított (reverse) változata is, amivel meg lehet fordítani a főtengely mentén a flex item-ek sorrendjét */
+   /*flex-direction: column;*/
+
+   /* engedélyezi az egy sorba (vagy oszlopba) ki nem férő flex item-ek átugrását a következő sorba (vagy oszlopba) */
+   flex-wrap: wrap;
+
+   /* rövidítése (shorthand) a flex-direction és flex-wrap property-knek */
+   /*flex-flow: column wrap;*/
+
+   /* mozgatja az elemek sorait (vagy oszlopait) a cross axis mentén (merőleges a main axis-re) */
+   /* FONTOS! az egész sorokat vagy oszlopokat mozgatja, nem az elemeket önmagukban */
+   /* ha a flex-wrap property értéket nowrap, akkor nincsen hatása */
+   /*align-content: center;*/
+
+   /* beállítja az összes flex item align-self értékét (lásd lejjebb) */
+   align-items: center;
+
+   /* igazítja az elemeket a main axis mentén, mindegyiket az adott sorban (vagy oszlopban) */
+   /* tulajdonképpen azt mondja meg, hogy a flex item-ek közötti hely hogyan legyen elosztva */
+   justify-content: space-evenly;
+
+   .flex-item {
+      &.child-3 {
+         background-color: chocolate;
+   
+         /* a flex item-eknek a sorrendjét is külön be lehet állítani, alapértelmezetten mindegyiké 0 */
+         order: 1;
+   
+         /* igazítja az elemet az adott sor (vagy oszlop) cross axis-e mentén */
+         align-self: end;
+   
+         /* egy érdekes trükk flexbox-szal: ha egy flex item-re auto margin-t állítunk be, akkor az összes rendelkezésre álló hely az adott irányban az elem margin-jára kerül (az auto margin mindig így működik, ám flexbox-ban sokkal könnyebb ezt kihasználni) */
+         margin-left: auto;
+      }
+   }
+}
+
+.flex-container.container-2 {
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+
+   .flex-item {
+      /* a következő property-khez ki kell kapcsolni az előre megadott szélességét (main axis menti méretét) */
+      width: unset;
+      /* a min-width ellenben nem fog zavarni, és a gyakorlatban is ezt érdemes használni egy flex item minimális méretének meghatározásához */
+      min-width: 20px;
+
+      /* a flex item-ek width-je (valójában méret a main axis mentén) */
+      flex-basis: 200px;
+
+      &.child-2 {
+         /* nemnegatív szám, hogy ha a flex itemek mérete nagyobb, mint a flex container mérete, akkor milyen aránnyal menjenek össze */
+         /* alapértelmezetten 1 */
+         flex-shrink: 0;
+
+         /* nemnegatív szám, hogy ha a flex itemek mérete kisebb, mint a flex container mérete, akkor milyen aránnyal nőjenek */
+         /* alapértelmezetten 0 */
+         flex-grow: 1;
+
+         /* rövidítés a flex-grow, flex-shrink és flex-basis értékeknek */
+         /* tipikus érték: 1 -> minden elem méretét ugyanakkorára állítja be */
+         /* flex: 1; */
+      }
+   }
+}

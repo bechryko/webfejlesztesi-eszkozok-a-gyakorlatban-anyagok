@@ -1,0 +1,109 @@
+body {
+   margin: 0;
+   padding: 2rem;
+}
+
+.grid-container {
+   outline: 1rem solid #f00;
+   margin-bottom: 30rem;
+}
+
+.grid-item {
+   background-color: green;
+   width: 100px;
+   height: 100px;
+   color: white;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 1rem;
+}
+
+/* END OF DEFAULT STYLES */
+
+
+.grid-container.container-1 {
+   /* a grid elrendezést engedélyezzük, azonban első ránézésre nem is történik semmi */
+   display: grid;
+
+   /* a gap property itt is ugyanúgy használható, mint a flexbox esetében */
+   gap: 1rem;
+
+   /* itt nem csak méreteket adhatunk meg, hogy mekkorák legyenek az oszlopok, hanem []-ek között vonalneveket is */
+   grid-template-columns:
+      5rem [wide-column-start]
+      1fr [normal-column-start]
+      3fr [normal-column-end]
+      1fr [wide-column-end]
+      5rem;
+
+   .grid-item {
+      width: unset;
+   }
+
+   .grid-item:nth-child(odd) {
+      /* a grid-column propertybe nem csak az oszlopok sorszámát lehet megadni, hanem az elnevezett vonalak neveit */
+      /* ha -start és -end végződésű, de ugyanolyan kezdetű vonalaink vannak, így is megadhatjuk az oszlopot */
+      /* ugyanígy működik sorra is */
+      grid-column: normal-column;
+   }
+
+   .grid-item:nth-child(even) {
+      grid-column: wide-column;
+   }
+}
+
+.grid-container.container-2 {
+   /* alap oszlopok és sorok, hogy a grid cellák nagyobbak legyenek az elemeknél, és a teljes grid container nagyobb legyen a grid celláknál */
+   display: grid;
+   width: 600px;
+   height: 600px;
+   grid-template-columns: repeat(3, 150px);
+   grid-template-rows: repeat(3, 150px);
+   gap: 20px;
+
+   /* igazítja a content-et (azaz magukat a grid cellákat a container-en belül) a block axis mentén (alapértelmezetten függőleges) */
+   align-content: center;
+
+   /* igazítja az elemeket a grid celláikon belül a block axis (függőleges) mentén */
+   /* valójában az elemek align-self property-jét állítja, ahogy flexboxnál */
+   align-items: end;
+
+   /* igazítja a content-et (a grid cellákat) az inline axis mentén (alapértelmezetten vízszintes) */
+   justify-content: space-around;
+
+   /* igazítja az elemeket a celláikon belül az inline axis (vízszintes) mentén */
+   /* valójában az elemek justify-self property-jét állítja */
+   justify-items: center;
+
+   /* rövidítés az align-content és justify-content-nek */
+   /*place-content: end;*/
+
+   /* rövidítés az align-items és justify-items-nek */
+   /*place-items: center;*/
+
+   .grid-item.child-5 {
+      /* elhelyezi az elemet a saját grid celláján belül */
+      /* rövidítés az align-self és justify-self-nek */
+      place-self: start;
+   }
+}
+
+.grid-container.container-3 {
+   display: grid;
+   gap: 1rem;
+
+   /* megadja, hogy automatikusan milyen irányba kerüljenek egymás után az elemek */
+   /* alapértelmezetten row */
+   /* ha egy sorunk/oszlopunk van, kicsit olyan, mint a flex-direction */
+   grid-auto-flow: column;
+
+   /* megadja, hogy az automatikusan létrejövő oszlopoknak mekkora legyen a szélessége */
+   grid-auto-columns: 150px 50px;
+
+   /* ekkor két sor fog létrejönni, első elem az első sorba kerül, második a másodikba, majd a harmadik az 1. sor 2. oszlopába */
+   /* először az első oszlop lesz feltöltve, majd a második, harmadik, stb -> ezt jelenti, hogy a grid-auto-flow column */
+   /*grid-template-rows: repeat(2, 1fr);*/
+
+   .grid-item {
+      width: unset;
+   }
+}

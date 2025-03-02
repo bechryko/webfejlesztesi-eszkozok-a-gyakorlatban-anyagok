@@ -1,0 +1,52 @@
+body {
+   margin: 0;
+   justify-items: center;
+   background-color: rgb(42, 42, 42);
+}
+
+main {
+   width: 75%;
+   padding: 1rem;
+   background-color: beige;
+
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1rem;
+}
+
+.card {
+   max-width: 20rem;
+   border: 1px solid black;
+   box-sizing: border-box;
+   border-radius: 0.5rem;
+   background-color: white;
+   overflow: hidden;
+
+   flex-grow: 1;
+
+   h2 {
+      background-color: bisque;
+      padding: 1rem;
+      margin: 0;
+      text-align: center;
+      font-size: 2rem;
+
+      height: 6.9375rem;
+   }
+
+   img {
+      display: block;
+      margin: auto;
+
+      height: 150px;
+   }
+
+   .description {
+      background-color: bisque;
+      padding: 1rem;
+      padding-bottom: auto;
+      margin: 0;
+
+      height: 11.25rem;
+   }
+}
