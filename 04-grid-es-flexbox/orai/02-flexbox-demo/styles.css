@@ -81,6 +81,7 @@ article {
 .newsletter-subscription-container {
   padding: 1.5rem;
   background-color: hsl(86, 100%, 95%);
+  isolation: isolate;
 
   .subscription-info {
     font-size: 1.5rem;
@@ -111,18 +112,30 @@ article {
 
   button {
     display: block;
+    position: relative;
     padding: 1rem 2rem;
-    background-color: hsl(86, 100%, 50%);
+    background: linear-gradient(to bottom, hsl(86, 100%, 80%), hsl(86, 100%, 30%));
     border: none;
     border-radius: 2ch;
     margin: auto;
     font-size: 1.75rem;
     cursor: pointer;
     user-select: none;
-    transition: box-shadow 0.2s ease;
 
-    &:hover {
-      box-shadow: 0 0 0.25rem 0.25rem hsl(86, 100%, 40%);
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: inherit;
+      border-radius: inherit;
+      filter: blur(0.75rem);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    &:hover::after {
+      opacity: 1;
     }
   }
 }
