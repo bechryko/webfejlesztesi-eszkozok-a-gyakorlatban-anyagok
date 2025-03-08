@@ -8,7 +8,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  justify-items: center;
 }
 
 ::selection {
@@ -17,6 +16,7 @@ body {
 
 article {
   width: clamp(15rem, 50%, 35rem);
+  margin: auto;
   background-color: hsl(86, 100%, 90%);
   padding: 2rem;
   border-radius: 3px;
@@ -71,7 +71,6 @@ article {
 .newsletter-subscription-container {
   padding: 1.5rem;
   background-color: hsl(86, 100%, 95%);
-  justify-items: center;
 
   .subscription-info {
     font-size: 1.5rem;
@@ -101,10 +100,12 @@ article {
   }
 
   button {
+    display: block;
     padding: 1rem 2rem;
     background-color: hsl(86, 100%, 50%);
     border: none;
     border-radius: 2ch;
+    margin: auto;
     font-size: 1.75rem;
     cursor: pointer;
     user-select: none;

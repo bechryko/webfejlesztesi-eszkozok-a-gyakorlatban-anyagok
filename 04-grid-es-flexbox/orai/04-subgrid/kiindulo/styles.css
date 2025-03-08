@@ -1,11 +1,11 @@
 body {
    margin: 0;
-   justify-items: center;
    background-color: rgb(42, 42, 42);
 }
 
 main {
    width: 75%;
+   margin: auto;
    padding: 1rem;
    background-color: beige;
 
