@@ -1,0 +1,115 @@
+:root {
+  /* Meg lehet adni a weboldalnak, hogy milyen színtémákat preferál, és ezáltal alkalmazkodik hozzájuk */
+  /* Színtémát a böngésző megjelenítés beállításaiban lehet állítani */
+  color-scheme: light dark;
+  font: 1.125rem / 1.25 'Times New Roman', Times, serif;
+}
+
+body {
+  margin: 0;
+}
+
+img.header-image {
+  width: 100%;
+  aspect-ratio: 21 / 4;
+  object-fit: cover;
+  object-position: right 90%;
+
+  /* Világos és sötét téma esetén más header-image-et jelenít meg az oldal */
+
+  @media (prefers-color-scheme: light) {
+    &.dark {
+      display: none;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    &.light {
+      display: none;
+    }
+  }
+}
+
+article {
+  padding: 3rem;
+  /* A column-width property megadja, hogy egy multi-column layout-ban ideális esetben milyen szélesek legyenek az oszlopok */
+  /* A ch egység arányos a karakterek szélességével az adott helyen, ezért szövegeknél érdemes ezt használni, hogy megmondjuk, milyen szélesre akarunk hagyni egy sort */
+  column-width: 30ch;
+  column-gap: 2em;
+  /* Megmondja, hogy legalább hány sor szövegnek kell lennie egy oszlop alján (ha tud) */
+  orphans: 3;
+  /* Megmondja, hogy legalább hány sor szövegnek kell lennie egy oszlop tetején (ha tud) */
+  widows: 3;
+}
+
+h1, h2, h3 {
+  /* Próbálja úgy tördelni a sorokat, hogy ugyanannyi szöveg legyen mindegyikben (ne pl. egyik sorban 10 szó, másodikban csak 1) */
+  text-wrap: balance;
+  margin-block: 0;
+  /* Megszünteti a float-olást, a headingek így mindig floatolt képek alá kerülnek */
+  clear: both;
+  /* Megmondja a böngészőnek, hogy ne legyen oszloptörés közvetlenül cím alatt */
+  break-after: avoid;
+
+  p + & {
+    margin-top: 1.5rem;
+  }
+
+  /* Olyan heading-ek után legyen alsó margó, amik után nem egy másik heading következik */
+  &:has(+ :not(&)) {
+    margin-bottom: 1rem;
+  }
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+.subtitle {
+  display: block;
+  font-style: italic;
+  text-align: center;
+  margin-block: 1rem;
+  padding-inline: 1rem;
+}
+
+img.hogwarts-house-badge {
+  max-width: min(10ch, 33%);
+  /* Szeretnénk a képet a szöveg mellé úsztatni */
+  float: left;
+  /* Itt is érdemes lehet a ch egységet használni, hogy minél jobban arányos legyen az oszlopok szélességével */
+  margin-right: 1ch;
+  margin-bottom: 1ch;
+  padding: 1ch;
+  border-radius: 1ch;
+  background-color: lightgray;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #343434;
+  }
+}
+
+p {
+  text-align: justify;
+  /* Próbálja úgy tördelni a sorokat, hogy ne csak egy szó ugorjon át az új sorba */
+  text-wrap: pretty;
+  /* Indentálás (paragrafus első sora) */
+  text-indent: 3ch;
+  margin-block: 0;
+
+  /* Szövegekben különösen érdekes szemantikus HTML elemeket lehet használni, érdemes lehet utánuk nézni */
+  /* Pár példa: https://developer.mozilla.org/en-US/docs/Web/HTML/Element#text_content és https://developer.mozilla.org/en-US/docs/Web/HTML/Element#inline_text_semantics */
+  q {
+    font-style: italic;
+  }
+
+  @media(prefers-color-scheme: dark) {
+    strong {
+      color: lightblue;
+    }
+  }
+}

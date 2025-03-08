@@ -1,0 +1,84 @@
+:root {
+  color-scheme: light dark;
+  font: 1.125rem / 1.25 'Times New Roman', Times, serif;
+}
+
+body {
+  margin: 0;
+}
+
+img.header-image {
+  width: 100%;
+  aspect-ratio: 21 / 4;
+  object-fit: cover;
+  object-position: right 90%;
+
+  @media (prefers-color-scheme: light) {
+    &.dark {
+      display: none;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    &.light {
+      display: none;
+    }
+  }
+}
+
+article {
+  padding: 3rem;
+}
+
+h1, h2, h3 {
+  margin-block: 0;
+
+  p + & {
+    margin-top: 1.5rem;
+  }
+
+  &:has(+ :not(&)) {
+    margin-bottom: 1rem;
+  }
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+.subtitle {
+  display: block;
+  font-style: italic;
+  text-align: center;
+  margin-block: 1rem;
+  padding-inline: 1rem;
+}
+
+img.hogwarts-house-badge {
+  max-width: min(4rem, 33%);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: lightgray;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #343434;
+  }
+}
+
+p {
+  margin-block: 0;
+
+  q {
+    font-style: italic;
+  }
+
+  @media(prefers-color-scheme: dark) {
+    strong {
+      color: lightblue;
+    }
+  }
+}

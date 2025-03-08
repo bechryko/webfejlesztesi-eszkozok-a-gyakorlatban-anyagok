@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding-top: 100px;
+}
+
+.trigger {
+  display: block;
+  margin: 0 auto 2rem;
+  width: 33%;
+  font-size: 1rem;
+  background-color: lightblue;
+  padding: 1rem;
+  border: none;
+
+  &:active {
+    outline: 2px solid blue;
+  }
+}
+
+.square {
+  margin: auto;
+  background-color: green;
+  width: 150px;
+  aspect-ratio: 1;
+}
+
+.animation {
+  position: relative;
+  top: 0;
+
+  .trigger:active + & {
+    top: 200px;
+  }
+
+  /* Próbáljatok ki transition és animation propertyket */
+  /* Néhány izgalmasabb timing function szerezhető innen: https://easingwizard.com/ */
+}
