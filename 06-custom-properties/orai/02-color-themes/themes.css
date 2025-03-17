@@ -1,0 +1,56 @@
+.default-theme, body {
+  --font-color: hsl(0, 0%, 10%);
+  --text-selection-background-color: hsl(86, 100%, 70%);
+  --text-selection-font-color: var(--font-color);
+
+  --background-image-url: url("https://images6.alphacoders.com/516/516511.jpg");
+  --background-image-blur: 4px;
+
+  --theme-button-background-color: hsl(86, 100%, 50%);
+  --article-background-color: hsl(86, 100%, 90%);
+  --tag-background-color: hsl(86, 100%, 50%);
+  --tag-font-color: var(--font-color);
+  --subscription-container-background-color: hsl(86, 100%, 95%);
+  --subscription-info-font-weight: 500;
+  --checkbox-accent-color: forestgreen;
+  --button-background-gradient-starting-color: hsl(86, 100%, 80%);
+  --button-background-gradient-ending-color: hsl(86, 100%, 30%);
+}
+
+.crimson-theme {
+  --font-color: hsl(0, 0%, 0%);
+  --text-selection-background-color: hsl(0, 68%, 52%);
+  --text-selection-font-color: white;
+
+  --background-image-url: url("https://wallpapers.com/images/featured/fantasy-05e34f7bfyhne5vg.jpg");
+  --background-image-blur: 6px;
+
+  --theme-button-background-color: hsl(0, 68%, 42%);
+  --article-background-color: hsl(0, 68%, 70%);
+  --tag-background-color: hsl(0, 68%, 42%);
+  --tag-font-color: white;
+  --subscription-container-background-color: hsl(0, 68%, 72%);
+  --subscription-info-font-weight: 500;
+  --checkbox-accent-color: darkred;
+  --button-background-gradient-starting-color: hsl(0, 68%, 80%);
+  --button-background-gradient-ending-color: hsl(0, 68%, 30%);
+}
+
+.night-theme {
+  --font-color: hsl(0, 0%, 90%);
+  --text-selection-background-color: hsl(240, 45%, 10%);
+  --text-selection-font-color: hsl(0, 0%, 80%);
+
+  --background-image-url: url("https://live.staticflickr.com/4736/38596421424_2fde6e6720_b.jpg");
+  --background-image-blur: 5px;
+  --background-image-extra-brightness: 0.4;
+
+  --theme-button-background-color: hsl(240, 82%, 15%);
+  --article-background-color: hsl(240, 45%, 20%);
+  --tag-background-color: hsl(240, 84%, 10%);
+  --subscription-container-background-color: hsl(240, 45%, 22%);
+  --subscription-info-font-weight: 500;
+  --checkbox-accent-color: cyan;
+  --button-background-gradient-starting-color: hsl(188, 81%, 26%);
+  --button-background-gradient-ending-color: hsl(186, 75%, 43%);
+}

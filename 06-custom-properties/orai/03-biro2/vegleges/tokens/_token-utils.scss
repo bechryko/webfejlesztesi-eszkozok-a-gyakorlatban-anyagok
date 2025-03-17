@@ -1,0 +1,17 @@
+$tokens-prefix: biro2;
+
+/* segédfüggvény, ami beregisztrálja az adott típusú design tokeneket a root
+elemen, és sok gépelés (projekt prefix, token típus) megspórol a fejlesztőnek */
+@mixin register-tokens($token-type, $token-map) {
+  :root {
+    @each $name, $value in $token-map {
+      --#{$tokens-prefix}-#{$token-type}-#{$name}: #{$value};
+    }
+  }
+}
+
+/* ez a segédfüggvény szintén azért készült, hogy sok gépelést megspóroljon a
+fejlesztőnek, amikor egy token értékét akarja használni */
+@function get-token-value($token-type, $token-name) {
+  @return var(--#{$tokens-prefix}-#{$token-type}-#{$token-name});
+}

@@ -1,0 +1,97 @@
+@use "./token-utils" as *;
+
+$tokens-type: comp;
+
+/* Component tokenekből lesz talán az alkalmazásban a legtöbb, hiszen minden
+egyes kis elemnek minden konkrét értékkel ellátott property-jét érdemes
+kiszervezni design tokenekbe. Általában system tokenekre, de néha reference
+tokenekre is mutathatnak, attól függően, hogy egy általános, rendszerszintű
+értékből lehet származtatni az értéküket (pl. a long-content-font-size system
+token minden olyan tartalomra vonatkozik, ami hosszabb szöveget tartalmaz, így a
+content-font-size component token is ezt használja), vagy egy konkrét értékből
+(pl. a footer-font-size-ra nincs általános rendszerszintű szabály, amit tudunk
+mondani, egyszerűen csak egy kisebb betűméretet (smaller-font-size reference
+token) akarunk használni). */
+
+$typography-tokens: (
+  language-selector-items-font-weight: get-token-value(ref, bold-font-weight),
+  sidebar-item-font-size: get-token-value(ref, smaller-font-size),
+  content-font-size: get-token-value(sys, long-content-font-size),
+  content-heading-font-weight: get-token-value(ref, semi-bold-font-weight),
+  content-heading-font-size: get-token-value(sys, heading-font-size),
+  footer-font-size: get-token-value(ref, smaller-font-size),
+  footer-line-height: get-token-value(ref, x-large-line-height),
+  footer-site-reference-font-size: get-token-value(ref, small-font-size)
+);
+
+$color-tokens: (
+  page-border-top-color: get-token-value(sys, highlight-color),
+  title-button-background-color: get-token-value(ref, primary-800),
+  title-button-color: get-token-value(ref, contrast-100),
+  language-selector-background-color:
+    get-token-value(sys, highlight-background-color),
+  language-selector-items-color: get-token-value(sys, highlight-color),
+  language-selector-item-selected-background-color:
+    get-token-value(sys, background-color),
+  content-heading-background-color:
+    get-token-value(sys, highlight-background-color),
+  sidebar-item-hover-background-color:
+    get-token-value(sys, highlight-background-color),
+  content-heading-color: get-token-value(sys, highlight-color),
+  footer-copyright-color: get-token-value(sys, pale-font-color),
+  footer-site-reference-color: get-token-value(sys, extra-pale-font-color)
+);
+
+$shadow-tokens: (
+  header-box-shadow: get-token-value(ref, box-shadow-1),
+  sidebar-box-shadow: get-token-value(ref, box-shadow-2),
+  content-box-shadow: get-token-value(ref, box-shadow-2)
+);
+
+$border-tokens: (
+  header-top-border: get-token-value(ref, border-3),
+  main-content-divider-border: get-token-value(sys, content-divider-border),
+  main-content-table-border: get-token-value(ref, border-0),
+  sidebar-item-hover-border-left: get-token-value(sys, highlight-border)
+);
+
+$spacing-tokens: (
+  vertical-layout-spacing: get-token-value(sys, layout-spacing),
+  main-section-horizontal-spacing: get-token-value(sys, layout-spacing),
+  header-padding: get-token-value(ref, small-spacing),
+  title-button-padding: get-token-value(ref, small-spacing),
+  language-selector-padding: get-token-value(ref, xx-small-spacing),
+  language-selector-item-horizontal-padding:
+    get-token-value(ref, x-small-spacing),
+  language-selector-item-vertical-padding:
+    get-token-value(ref, xx-small-spacing),
+  sidebar-item-horizontal-padding: get-token-value(ref, medium-spacing),
+  sidebar-item-vertical-padding: get-token-value(ref, small-spacing),
+  content-card-table-top-spacing: get-token-value(ref, small-spacing),
+  content-card-table-bottom-spacing: get-token-value(ref, large-spacing),
+  content-card-table-cell-horizontal-padding:
+    get-token-value(ref, local-small-spacing),
+  content-card-table-cell-vertical-padding:
+    get-token-value(ref, local-x-small-spacing),
+  footer-vertical-padding: get-token-value(ref, large-spacing)
+);
+
+$other-tokens: (
+  title-button-hover-transition-time:
+    get-token-value(ref, short-transition-time),
+  sidebar-item-hover-transition-time:
+    get-token-value(sys, color-change-transition-time),
+  title-button-border-radius: get-token-value(ref, small-border-radius),
+  title-button-hover-scale-ratio: get-token-value(ref, small-hover-scale-ratio),
+  language-selector-height: get-token-value(ref, medium-element-size),
+  language-selector-item-width: get-token-value(ref, medium-element-size),
+  content-card-border-radius: get-token-value(ref, small-border-radius),
+  content-card-header-padding: get-token-value(ref, local-small-spacing)
+);
+
+@include register-tokens($tokens-type, $typography-tokens);
+@include register-tokens($tokens-type, $color-tokens);
+@include register-tokens($tokens-type, $shadow-tokens);
+@include register-tokens($tokens-type, $border-tokens);
+@include register-tokens($tokens-type, $spacing-tokens);
+@include register-tokens($tokens-type, $other-tokens);

@@ -1,0 +1,13 @@
+/* Hogyha mappákba szervezzük az SCSS fájlokat, érdemes lehet index fájlokat
+használni. Hogyha itt forward-oljuk a mappában lévő egyes fájlok tartalmát,
+azzal elérhetővé tesszük őket úgy is, ha magának a tartalmazó mappának az
+útvonalát importáljuk egy SCSS forrásban, nem pedig a konkrét fájlokat (lásd:
+styles.scss). Az "as ref-*" egy ref prefixet tesz a kiexportált elemek elé, mert
+különben névütközés lenne. Szóval ott, ahol ezt a mappát use-oljuk, pl. a color
+tokeneket ref-color-tokens, sys-color-tokens és comp-color-tokens néven érhetjük
+el. A hide kulcsszó pedig elrejti azokat az elemeket, amiket nem akarunk
+forward-olni, így ezek nem lesznek elérhetők a mappa use-olásával.
+További infó: https://sass-lang.com/documentation/at-rules/forward/ */
+@forward "./reference-tokens" as ref-* hide $tokens-type;
+@forward "./system-tokens" as sys-* hide $tokens-type;
+@forward "./component-tokens" as comp-* hide $tokens-type;

@@ -1,0 +1,100 @@
+@use "./token-utils" as *;
+
+$tokens-type: ref;
+
+/* Reference tokenekben tipikusan palettákat (pl. szín) tárolnak el, látszanak
+az átmenetek és különböző méretek az egyes értékeknél. Nem gond, ha nincs
+feltétlenül minden reference token használva, hiszen ha úgy döntünk, vagy a
+designer úgy dönt, hogy az alkalmazásban használt elsődleges szín pl. túl
+világos, egy árnyalattal sötétebbre lehet lecserélni. Vagy ha világos és sötét
+témát akarunk megvalósítani, akkor is jól jöhetnek a különböző árnyalatú színek.
+Reference tokeneket továbbá nem érdemes kitörölni sem, ha nem használjuk, mert
+ha később újabb oldalak kerülnek az alkalmazásba, vagy újabb elemek egy meglévő
+oldalra, könnyen lehet, hogy szükség lesz rájuk. */
+
+$typography-tokens: (
+  font-family: "'Segoe UI', Arial, sans-serif",
+  semi-bold-font-weight: 500,
+  bold-font-weight: 700,
+  smallest-font-size: 0.75em,
+  smaller-font-size: 0.8em,
+  larger-font-size: 1.5em,
+  small-font-size: 0.75rem,
+  large-line-height: 1.5,
+  x-large-line-height: 2
+);
+
+$color-tokens: (
+  primary-100: #e5e9ff,
+  primary-200: #afb8e7,
+  primary-300: #8a98df,
+  primary-400: #6d7ed5,
+  primary-500: #4158d0,
+  primary-600: #34459a,
+  primary-700: #2f3b74,
+  primary-800: #282f57,
+  primary-900: #1b203d,
+  contrast-100: white,
+  contrast-200: #eee,
+  contrast-300: #bbb,
+  contrast-400: #999,
+  contrast-500: #666,
+  contrast-600: #495057,
+  contrast-700: #32383e,
+  contrast-800: #23272c,
+  contrast-900: black,
+  secondary-100: white,
+  secondary-200: rgba(87, 96, 104, 0.3),
+  secondary-300: rgba(33, 37, 41, 0.3)
+);
+
+$shadow-tokens: (
+  box-shadow-1: 0 0 10px rgb(202, 202, 202),
+  box-shadow-2: 0 0 10px rgb(233, 233, 233)
+);
+
+/* olyan is lehetséges, hogy egy reference token is egy másik reference tokenre
+mutat, ez különö árnyék vagy szegély színeknél lehet indokolt */
+$border-tokens: (
+  border-0: 1px solid rgb(225, 225, 225),
+  border-1: 1px solid lightgray,
+  border-2: 3px solid get-token-value(ref, primary-500),
+  border-3: 0.5rem solid get-token-value(ref, primary-500)
+);
+
+/* a "local" arra utal, hogy az aktuális elem betűméretétől függ a spacing
+mérete (ha nem érted, miért, nézz utána a rem és em közötti különbségnek!), de
+persze az elnevezés a fejlesztő (és olykor a designer) feladata, olyan nevet
+válassz, ami logikus, érted, mit jelent, és adott esetben a csapatod is érti,
+mit jelent */
+$spacing-tokens: (
+  xx-small-spacing: 0.25rem,
+  x-small-spacing: 0.5rem,
+  small-spacing: 1rem,
+  medium-spacing: 2rem,
+  large-spacing: 3rem,
+  local-xx-small-spacing: 0.25em,
+  local-x-small-spacing: 0.5em,
+  local-small-spacing: 1em,
+  local-medium-spacing: 2em,
+  local-large-spacing: 3em
+);
+
+$other-tokens: (
+  x-short-transition-time: 200ms,
+  short-transition-time: 400ms,
+  small-border-radius: 0.5rem,
+  medium-border-radius: 1rem,
+  large-border-radius: 2rem,
+  small-hover-scale-ratio: 1.05,
+  medium-element-size: 2rem,
+  large-element-size: 3.5rem
+);
+
+/* tokenek beregisztrálása a utility függvénnyel */
+@include register-tokens($tokens-type, $typography-tokens);
+@include register-tokens($tokens-type, $color-tokens);
+@include register-tokens($tokens-type, $shadow-tokens);
+@include register-tokens($tokens-type, $border-tokens);
+@include register-tokens($tokens-type, $spacing-tokens);
+@include register-tokens($tokens-type, $other-tokens);
