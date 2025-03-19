@@ -1,0 +1,4 @@
+Egészítsd ki az órai példaprogramok közül a "01-98-css" nevűt, hogy egy Windows 98-szerű tálca (taskbar) is legyen a képernyőn, rajta legalább egy megnyitott programmal, valamelyiken a fókusszal. Saját stílusokkal valósítsd meg, nem használhatsz egy képet a tálcáról! A Start Menü, az esetlegesen megnyitott alkalmazások, és a tálca jobb oldalán lévő kis gomboknak csak az ikonjaihoz használhatsz képet!
+Hogyha megcsináltad a "01-xp-css" szorgalmit, akkor Windows XP vagy 7 témához is megcsinálhatod a tálcát. (De úgy is csak 1 pontot lehet szerezni ezért a szorgalmi feladatért!)
+
+Szerezhető pluszpont: 1

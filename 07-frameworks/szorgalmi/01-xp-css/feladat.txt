@@ -1,0 +1,5 @@
+Írd át az órai példaprogramok közül a "01-98-css" nevűt, hogy ne Windows 98, hanem Windows XP témát jelenítsen meg! Cseréld ki a hátteret, és változtasd meg a két ablak stílusát!
+
+Szerezhető pluszpont: 1
+
+További 1 pluszpontért írd át az oldalt hasonlóan, csak Windows 7 témára!

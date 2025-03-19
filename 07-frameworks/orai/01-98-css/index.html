@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Windows 98</title>
+    <link rel="stylesheet" href="https://jdan.github.io/98.css/98.css" />
+    <style>
+      body {
+        background-image: url("https://archive.org/download/windows-98_20220610_1953/Windows_98.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: top;
+        background-size: cover;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      * {
+        user-select: none;
+      }
+
+      menu li {
+        padding: 0.375rem;
+      }
+
+      .window:not(#tab) {
+        position: absolute;
+        width: fit-content;
+
+        .title-bar-text {
+          padding-right: 1rem;
+        }
+      }
+
+      #small-window {
+        top: 10%;
+        left: 5%;
+
+        .window-body,
+        #tab {
+          padding: 2rem;
+        }
+      }
+
+      #main-window {
+        top: 40%;
+        left: 30%;
+
+        .window-body {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 1rem;
+
+          p {
+            margin-bottom: 0;
+          }
+
+          section.field-row {
+            justify-content: flex-end;
+          }
+        }
+      }
+
+      .progress-indicator-bar {
+        width: 40% !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="small-window" class="window active glass">
+      <div class="title-bar">
+        <div class="title-bar-text">Szegedi Tudományegyetem / Természettudományi és Informatikai Kar</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Help"></button>
+        </div>
+      </div>
+      <div class="window-body has-space">
+        <section class="tabs">
+          <menu role="tablist" aria-label="Courses">
+            <li role="tab">Webfejlesztés alapjai</li>
+            <li role="tab" aria-selected="true">Webfejlesztési eszközök a gyakorlatban</li>
+            <li role="tab">Webfejlesztési keretrendszerek</li>
+          </menu>
+          <section class="window" role="tabpanel" id="tab">
+            <p>Kurzusműveletek</p>
+            <button class="default">Kurzus teljesítése</button>
+          </section>
+        </section>
+      </div>
+    </div>
+    <div id="main-window" class="window active glass" role="dialog">
+      <div class="title-bar">
+        <div class="title-bar-text">Webfejlesztési eszközök a gyakorlatban</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body has-space">
+        <p>5-ös betöltése...</p>
+        <div class="progress-indicator segmented">
+          <span class="progress-indicator-bar"></span>
+        </div>
+        <section class="field-row">
+          <button>Cancel</button>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
