@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Windows 7</title>
+    <link rel="stylesheet" href="https://unpkg.com/7.css" />
+    <style>
+      body {
+        background-image: url("https://wparena.com/wp-content/uploads/2009/09/img0.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      * {
+        user-select: none;
+      }
+
+      .window {
+        position: absolute;
+        width: fit-content;
+
+        .title-bar-text {
+          padding-right: 1rem;
+        }
+      }
+
+      #small-window {
+        top: 10%;
+        left: 5%;
+
+        .window-body,
+        #tab {
+          padding: 2rem;
+        }
+      }
+
+      #main-window {
+        top: 50%;
+        left: 50%;
+
+        .window-body {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 1rem;
+
+          p {
+            margin-bottom: 0;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="small-window" class="window active glass">
+      <div class="title-bar">
+        <div class="title-bar-text">Szegedi Tudományegyetem / Természettudományi és Informatikai Kar</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+        </div>
+      </div>
+      <div class="window-body has-space">
+        <section class="tabs">
+          <menu role="tablist" aria-label="Tabs Template">
+            <button role="tab" disabled>Webfejlesztés alapjai</button>
+            <button role="tab" aria-controls="tab" aria-selected="true">Webfejlesztési eszközök a gyakorlatban</button>
+            <button role="tab" disabled>Webfejlesztési keretrendszerek</button>
+          </menu>
+          <section role="tabpanel" id="tab">
+            <p>Kurzusműveletek</p>
+            <button class="default" onclick="location.href='#main-window'">Kurzus teljesítése</button>
+          </section>
+        </section>
+      </div>
+    </div>
+    <div id="main-window" class="window active glass" role="dialog">
+      <div class="title-bar">
+        <div class="title-bar-text">Webfejlesztési eszközök a gyakorlatban</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close" onclick="history.back()"></button>
+        </div>
+      </div>
+      <div class="window-body has-space">
+        <p>5-ös betöltése...</p>
+        <div role="progressbar" class="marquee"></div>
+        <section class="field-row" style="justify-content: flex-end">
+          <button onclick="history.back()">Cancel</button>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
