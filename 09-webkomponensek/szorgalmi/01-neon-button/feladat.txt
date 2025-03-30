@@ -1,0 +1,11 @@
+A megadott HTML és CSS fájl segítségével készíts el egy saját HTML elemet, ami a neon gombot valósítja meg! A "state" attribútuma határozza meg, hogy ki vagy be van kapcsolva, ezt rákattintással lehessen kapcsolni! Legyen ezen kívül egy "color" attribútuma is, amivel a gomb és a fényének a színe határozható meg. Alapértelmezetten, tehát ha nincs megadva, ennek az értéke legyen "magenta"!
+
+A feladat csak az órán végezhető el!
+Nyugodtan dolgozzatok együtt párokban! A pár egyik tagjának elég beadnia a szorgalmit, de írja oda a pár másik tagjának nevét is!
+Elég egy .js fájlt beadni.
+
+Szerezhető pluszpont: 2
+
+További max 1 pluszpontért adj meg további attribútumokat, amikkel személyre lehet szabni a neon gomb megjelenését (pl. text, transition-time, light-size, light-intensity, stb, ami eszedbe jut)!
+
+Példa HTML: <neon-button state="off" color="#9bdf00"></neon-button>

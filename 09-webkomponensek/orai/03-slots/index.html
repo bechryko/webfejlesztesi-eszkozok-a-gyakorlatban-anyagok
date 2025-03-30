@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9. óra - Slots</title>
+  <style>
+    body {
+      height: 100dvh;
+      margin: 0;
+    }
+  </style>
+  <script src="hello-world-element.js"></script>
+</head>
+<body>
+  <hello-world></hello-world>
+  <hello-world>
+    <!-- Úgy tudunk egy HTML elemet a saját HTML elemünk egyik slot-jába helyezni, ha a belsejébe
+      írjuk HTML-en, valamint megadjuk a "slot" attribútumát, hogy egyezzen a saját HTML elemünk
+      megfelelő slot elemének "name" attribútumával. -->
+    <span slot="name">Irinyi</span>
+  </hello-world>
+  <hello-world>
+    <!-- Ez a p nem fog megjelenni a ::slotted stílusok miatt. -->
+    <p slot="name">Bolyai</p>
+  </hello-world>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9. óra - Hello World</title>
+  <style>
+    body {
+      height: 100dvh;
+      margin: 0;
+    }
+  </style>
+  <!-- Be kell importálni azt a szkriptet, ami definiálja a saját HTML elemünket.
+    A JavaScript forrásban látható, hogy ez esetben miért kell a defer attribútum. -->
+  <script src="hello-world-element.js" defer></script>
+</head>
+<body>
+  <!-- Itt már lehet használni a saját HTML elemünket. -->
+  <hello-world></hello-world>
+</body>
+</html>

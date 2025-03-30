@@ -1,0 +1,52 @@
+html {
+  color-scheme: only dark;
+}
+
+body {
+  margin: 0;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+
+button {
+  position: relative;
+  font-size: 2rem;
+  padding: 0.5em 1em;
+  color: magenta;
+  border: 0.25em solid magenta;
+  border-radius: 0.5em;
+  background-color: transparent;
+  box-shadow: inset 0 0 1em magenta, 0 0 1em magenta;
+  text-shadow: 0 0 0.25em magenta;
+  opacity: 0.1;
+  transition: opacity 250ms ease;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &[state="on"] {
+    opacity: 1;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 150%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: magenta;
+    transform: perspective(1em) rotateX(25deg) scale(1.1, 0.6);
+    filter: blur(1em);
+    opacity: 0;
+    transition: inherit;
+  }
+}
