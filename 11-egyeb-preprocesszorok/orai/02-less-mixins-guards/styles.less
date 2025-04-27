@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  text-align: justify;
+  background-color: #eeffff;
+}
+
+button {
+  @base-background: #bfffff;
+
+  text-align: center;
+  background-color: @base-background;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 250ms ease;
+
+  &:hover {
+    background-color: darken(@base-background, 10%);
+  }
+}
+
+a[role="button"]:extend(button all) {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  max-width: 50rem;
+  height: 100dvh;
+  margin: auto;
+  background-color: #ffffd7;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+nav {
+  ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+
+    li {
+      flex-basis: 100%;
+
+      a {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+p#long-text {
+  margin-top: 3rem;
+  // LESS-ben bármilyen osztály vagy id szabályt lehet mixinként használni, csak egy zárójelpárt kell a név után írni
+  .warn-text();
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.columns-container {
+  @layout: columns;
+
+  display: grid;
+  gap: 1rem;
+  margin-bottom: $gap;
+
+  // úgynevezett guard-okat is lehet használni, amik egy feltételhez kötik, hogy az adott stílust alkalmazza-e
+  // így könnyen lehet if-eket készíteni egy szelektoron belül (vagy akár egy egész szelektor után is tehetjük)
+  & when (@layout = columns) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .column {
+    @shadow-offset: 3px;
+
+    border-radius: 0.5rem;
+    background-color: #ffefb4;
+    padding: 1.5rem;
+    box-shadow: @shadow-offset @shadow-offset 5px #646464;
+    text-align: start;
+  }
+}
+
+.submit-button {
+  display: block;
+  margin-inline: auto;
+}
+
+.warn-text {
+  color: red;
+  font-style: italic;
+  .n2-padding(5);
+}
+
+// ha egy class (vagy id) szelektort írunk, csak zárójelpárral utána, azzal paraméteres mixint hozhatunk létre
+// ezek a class/id szabályok nem generálódnak CSS-sé, csak akkor, ha mixinként valahol meghívjuk
+// itt is van default paraméter
+.n2-padding(@n, @p: 1) {
+  // mixin-ekbe is lehet guard-okat írni
+  & when (@n = 0) {
+    padding: @p * 1px;
+  }
+
+  & when (@n > 0) {
+    .n2-padding(@n - 1, @p * 2);
+  }
+}

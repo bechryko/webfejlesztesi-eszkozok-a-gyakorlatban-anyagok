@@ -1,0 +1,94 @@
+// VSCode bővítmény .less fájlok fordításához: mrcrowl.easy-less
+
+body {
+  margin: 0;
+  text-align: justify;
+  background-color: #eeffff;
+}
+
+button {
+  // változókat SCSS-hez hasonlóan létre tudunk hozni, csak itt nem $, hanem @ a prefix
+  @base-background: #bfffff;
+
+  text-align: center;
+  background-color: @base-background;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 250ms ease;
+
+  &:hover {
+    // a LESS-nek rengeteg beépített függvénye van, amikről itt olvashattok: https://lesscss.org/functions/
+    background-color: darken(@base-background, 10%);
+  }
+}
+
+// Az "extend" pseudo-class CSS-re való fordítás után azt csinálja, hogy a kijelölt szelektorok definíciójához hozzáadja az itt definiált szelektort. Azaz lényegében azt mondja meg, hogy ez a szelektor kapja meg az összes stílust, amit az extend-ben megadott is (mintha csak egy OO nyelvben öröklődne). Az extend paramétereként megadott szöveg pontos egyezést néz a szelektorok tekintetében, de az "all" kulcsszóval elérhetjük, hogy minden szelektort figyelembe vegyen, amiben szerepel az előtte álló (esetünkben "button") szelektor.
+a[role="button"]:extend(button all) {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  max-width: 50rem;
+  height: 100dvh;
+  margin: auto;
+  background-color: #ffffd7;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+nav {
+  ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+
+    li {
+      flex-basis: 100%;
+
+      a {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+p#long-text {
+  margin-top: 3rem;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.columns-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  // LESS-ben $-ral hivatkozhatunk egy másik, definiált property-re, ezáltal megspórolhatunk új változók bevezetését
+  margin-bottom: $gap; // 1rem
+
+  .column {
+    @shadow-offset: 3px;
+
+    border-radius: 0.5rem;
+    background-color: #ffefb4;
+    padding: 1.5rem;
+    box-shadow: @shadow-offset @shadow-offset 5px #646464;
+    text-align: start;
+  }
+}
+
+.submit-button {
+  display: block;
+  margin-inline: auto;
+}
+
+.warn-text {
+  color: red;
+  font-style: italic;
+}
