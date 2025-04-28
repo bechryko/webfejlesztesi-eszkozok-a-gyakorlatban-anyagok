@@ -1,0 +1,74 @@
+body {
+   margin: 0;
+}
+
+.container {
+   font-size: 16px;
+   margin-block: 5em;
+}
+
+.box {
+   border: 1px solid black;
+   height: 2em;
+   width: 2em;
+   background-color: var(--clr, white);
+
+   & + & {
+      margin-top: 2em;
+   }
+}
+
+/* 1vw (viewport width) = az oldal szélességének 1%-a; vh hasonló (viewport height)
+Fejlettebb viewport mértékegységekről (pl. dvh, lvw) itt olvashattok: https://dev.to/frehner/css-vh-dvh-lvh-svh-and-vw-units-27k4 */
+.container:nth-child(1) .box {
+   &:nth-child(1) {
+      --clr: blue;
+      width: 75vw;
+   }
+
+   &:nth-child(2) {
+      --clr: red;
+      width: 50vw;
+   }
+
+   &:nth-child(3) {
+      --clr: green;
+      width: 25vw;
+   }
+}
+
+:root {
+   font-size: 8px;
+}
+
+.container:nth-child(2) p {
+   &:nth-child(1) {
+      color: blue;
+
+      span {
+         /* 1px = 1 pixel a kijelzőn */
+         font-size: 24px;
+      }
+   }
+
+   &:nth-child(2) {
+      color: darkred;
+
+      span {
+         /* 1rem = a :root elem betűmérete (alapértelmezetten 16px)
+         rem-px átváltó VSCode extension: sainoba.px-to-rem */
+         font-size: 1.5rem;
+      }
+   }
+
+   &:nth-child(3) {
+      color: forestgreen;
+
+      span {
+         /* 1em = az aktuális elem (vagy ha font-size-nál használjuk, a szülőelem) betűmérete */
+         font-size: 1.5em;
+      }
+   }
+}
+
+/* Egyéb mértékegységekről olvashattok itt: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#numbers_lengths_and_percentages */

@@ -1,0 +1,19 @@
+/* CanIUse-on érdemes megnézni az attr függvényt, annyira új, hogy a VSCode is hibát ad a szintaxisára. De a legújabb Chrome és Edge böngészőkön teljesen jól működik. */
+
+.container {
+  display: grid;
+  /* Az attr függvénnyel mondhatjuk meg, hogy az adott HTML elem mely attribútumát szeretnénk értékként használni az adott helyen.
+  Alapból a CSS string-ként használja fel ezt az értéket, de a repeat függvény ezt nem fogadja el. Szám kell, amit a type(<number>) függvényhívással mondhatunk meg.
+  Az attr függvénynek 2. paraméterként egy alapértelmezett értéket is meg lehet adni, ami akkor kerül használatra, ha a HTML elemnek nincs ilyen attribútuma. */
+  grid-template-columns: repeat(attr(data-columns type(<number>), 3), 1fr);
+  padding: 1rem;
+
+  &::after {
+    /* Hogyha a content property értékeként szeretnénk egy attribútum értékét, akkor nem kell a típusát megváltoztatni. */
+    content: attr(data-columns);
+  }
+}
+
+.card {
+  border: 1px solid black;
+}

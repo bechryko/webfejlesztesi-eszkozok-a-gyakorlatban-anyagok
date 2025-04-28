@@ -1,0 +1,94 @@
+@use "sass:list";
+
+body > * {
+  margin-bottom: 15rem;
+}
+
+// változtassátok az alapszíneket kedvetek szerint
+$base-colors: (dodgerblue, darkred, green, yellow);
+// a világossági szinteket itt tudjátok állítani
+$lightness-levels: (25%, 50%, 75%);
+
+.container-3-3 {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 1.5rem;
+  width: fit-content;
+
+  .base-color-container {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: subgrid;
+
+    @for $i from 1 through list.length($base-colors) {
+      &:nth-child(#{$i}) .lightness-box{
+        height: 3rem;
+        width: 15rem;
+        border: 1px solid black;
+
+        @for $j from 1 through list.length($lightness-levels) {
+          &:nth-child(#{$j}) {
+            // itt a színfüggvényt állíthatjátok át, és az ahhoz tartozó értékeket (pl. hsl-nél h s és l)
+            // figyeljetek oda, hogy a $lightness-levels adott eleme mindig a fényerő helyén legyen
+            // függvények, amiket ki lehet próbálni: hsl, lab, oklab
+            background-color: hsl(from list.nth($base-colors, $i) h s list.nth($lightness-levels, $j));
+          }
+        }
+      }
+    }
+  }
+}
+
+// interpolációs módok a színkeveréshez, teljes lista ezen az oldalon: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix
+$interpolation-methods: (srgb, srgb-linear, display-p3, a98-rgb, prophoto-rgb, rec2020, lab, oklab, xyz, xyz-d50, xyz-d65, hsl, hwb, lch, oklch);
+// hány %-ban vegyen részt a színkeverésben az első szín
+$color-1-percent: 50%;
+
+.container-3-15 {
+  // itt tudjátok az alapszíneket változtatni
+  --base-color-1: red;
+  --base-color-2: yellow;
+
+  display: grid;
+  grid-template: repeat(15, 1fr) / repeat(3, 1fr);
+  gap: 1.5rem;
+  width: fit-content;
+
+  .color-mix-container {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: subgrid;
+
+    .color-box {
+      height: 3rem;
+      width: 15rem;
+      border: 1px solid black;
+
+      &.color-1 {
+        background-color: var(--base-color-1);
+      }
+
+      &.color-2 {
+        background-color: var(--base-color-2);
+      }
+    }
+
+    @for $i from 1 through list.length($interpolation-methods) {
+      &:nth-child(#{$i}) .color-box.mix {
+        $method: list.nth($interpolation-methods, $i);
+
+        position: relative;
+        background-color: color-mix(in #{$method}, var(--base-color-1) $color-1-percent, var(--base-color-2));
+
+        &::after {
+          content: '#{$method}';
+          position: absolute;
+          font-size: 1.5rem;
+          line-height: 2;
+          text-align: center;
+          inset: 0;
+        }
+      }
+    }
+  }
+}
