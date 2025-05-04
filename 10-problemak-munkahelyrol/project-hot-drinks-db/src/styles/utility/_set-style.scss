@@ -1,0 +1,4 @@
+@mixin set-style($style-name) {
+  background-color: var(--#{$style-name});
+  color: var(--on-#{$style-name});
+}

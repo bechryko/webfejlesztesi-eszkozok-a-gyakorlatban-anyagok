@@ -1,0 +1,45 @@
+@use '../styles/mixins';
+
+main {
+  display: grid;
+  grid-template-columns: 60%;
+  grid-template-rows: repeat(8, auto) 1fr;
+  justify-content: center;
+
+  h2:not(:first-child) {
+    margin-top: 3rem;
+  }
+}
+
+hddb-horizontal-drink-scroller {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 20rem;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  overflow-x: scroll;
+  height: 15rem;
+
+  .drink-entry-container {
+    border: 2px solid var(--primary);
+    padding: 1rem;
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    .actions-container {
+      @include mixins.actions-container;
+    }
+
+    .tooltip {
+      font-size: 0.875rem;
+      pointer-events: none;
+    }
+  }
+
+  p.no-recommendation {
+    font-size: 1.5rem;
+  }
+}

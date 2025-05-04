@@ -1,0 +1,19 @@
+h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .form-field-container {
+    width: 50%;
+  }
+}
+
+#create-button {
+  font-size: 1.25rem;
+  padding: 1rem 1.5rem;
+  margin-top: 3rem;
+}

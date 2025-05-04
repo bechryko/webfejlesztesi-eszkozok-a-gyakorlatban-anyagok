@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <base href=".." />
+    <link
+      rel="icon"
+      href="assets/favicon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/styles.css"
+    />
+    <link
+      rel="stylesheet"
+      href="drinks-overview-page/drinks-overview-page.css"
+    />
+  </head>
+  <script src="shared/components/page-wrapper.js"></script>
+  <body>
+    <hddb-page-wrapper page-name="Drinks">
+      <script src="drinks-overview-page/drinks-overview-page.js"></script>
+      <script src="drinks-overview-page/components/drink-tile.js"></script>
+      <script src="drinks-overview-page/services/drinks-service.js"></script>
+      <hddb-header></hddb-header>
+      <main>
+        <div id="actions-container">
+          <input
+            id="search-field"
+            type="search"
+            placeholder="Search..."
+          />
+          <a
+            class="button no-round"
+            role="button"
+            href="add-drink-page/add-drink-page.html"
+          >
+            Add drink
+          </a>
+        </div>
+        <div id="drinks-container"></div>
+      </main>
+    </hddb-page-wrapper>
+  </body>
+</html>

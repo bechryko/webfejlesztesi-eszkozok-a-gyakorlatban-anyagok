@@ -1,0 +1,18 @@
+@mixin input($large-spacing: true) {
+  background-color: var(--primary-container);
+  @if ($large-spacing == true) {
+    padding: 1rem;
+  } @else if ($large-spacing == false) {
+    padding-inline: 0.25rem;
+  } @else {
+    @error "Invalid value for $large-spacing: #{$large-spacing}!";
+  }
+  border: 2px solid var(--default-text-color);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+
+  &:focus-visible {
+    outline-color: var(--on-primary-container);
+    border-color: var(--primary);
+  }
+}

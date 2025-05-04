@@ -1,0 +1,26 @@
+hddb-navigation-bar {
+  nav {
+    justify-content: center;
+
+    a {
+      padding: 0.5rem;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1rem;
+      width: 10%;
+
+      &:first-child {
+        margin-left: auto;
+      }
+
+      &:last-child {
+        margin-right: auto;
+      }
+
+      &.selected {
+        cursor: auto;
+        pointer-events: none;
+      }
+    }
+  }
+}

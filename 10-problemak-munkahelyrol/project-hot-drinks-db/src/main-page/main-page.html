@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <base href=".." />
+    <link
+      rel="icon"
+      href="assets/favicon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/styles.css"
+    />
+    <link
+      rel="stylesheet"
+      href="main-page/main-page.css"
+    />
+  </head>
+  <script src="shared/components/page-wrapper.js"></script>
+  <body>
+    <hddb-page-wrapper page-name="Main">
+      <script src="main-page/constants/recommendations.js"></script>
+      <script src="main-page/components/horizontal-drink-scroller.js"></script>
+      <script src="main-page/services/quick-actions-service.js"></script>
+      <script src="drinks-overview-page/services/drinks-service.js"></script>
+      <hddb-header></hddb-header>
+      <main>
+        <h2>Coffee recommendations</h2>
+        <hddb-horizontal-drink-scroller drink-type="coffee"></hddb-horizontal-drink-scroller>
+        <h2>Hot chocolate recommendations</h2>
+        <hddb-horizontal-drink-scroller drink-type="hot-chocolate"></hddb-horizontal-drink-scroller>
+        <h2>Tea recommendations</h2>
+        <hddb-horizontal-drink-scroller drink-type="tea"></hddb-horizontal-drink-scroller>
+        <h2>Hot alcoholic beverages recommendations</h2>
+        <hddb-horizontal-drink-scroller drink-type="alcoholic"></hddb-horizontal-drink-scroller>
+      </main>
+    </hddb-page-wrapper>
+  </body>
+</html>

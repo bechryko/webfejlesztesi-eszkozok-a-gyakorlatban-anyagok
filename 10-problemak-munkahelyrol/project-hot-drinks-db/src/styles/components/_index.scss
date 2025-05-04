@@ -1,0 +1,6 @@
+//@index('./*', f => `@forward '${f.path}';`)
+@forward './_form-field';
+@forward './_header';
+@forward './_navigation-bar';
+@forward './_page-wrapper';
+//@endindex

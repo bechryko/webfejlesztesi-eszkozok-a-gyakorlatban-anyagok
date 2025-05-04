@@ -1,0 +1,47 @@
+:is(:root, body.light) hddb-page-wrapper {
+  --default-text-color: #54300c;
+
+  --primary: #a86523;
+  --on-primary: #ffffff;
+  --primary-container: #f1c09f;
+  --on-primary-container: #7b4814;
+
+  --secondary: #e9a319;
+  --on-secondary: var(--default-text-color);
+  --secondary-container: #ebdec3;
+  --on-secondary-container: var(--default-text-color);
+
+  --tertiary: #fad59a;
+  --on-tertiary: var(--default-text-color);
+  --tertiary-container: #f5ede0;
+  --on-tertiary-container: var(--default-text-color);
+
+  --error: #a90909;
+  --on-error: #ffffff;
+  --error-container: #ffdad6;
+  --on-error-container: #410002;
+
+  --background: #fffbff;
+  --on-background: #1c1b1e;
+
+  --surface: #fdf8fd;
+  --on-surface: #1c1b1e;
+  --surface-variant: #e7e0eb;
+  --on-surface-variant: #49454e;
+  --inverse-surface: #313033;
+  --inverse-on-surface: #f4eff4;
+  --inverse-primary: #cfbcff;
+  --surface-dim: #ddd8dd;
+  --surface-bright: #fdf8fd;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f7f2f7;
+  --surface-container: #f2ecf1;
+  --surface-container-high: #ece7eb;
+  --surface-container-highest: #e6e1e6;
+
+  --outline: #7a757f;
+  --outline-variant: #cac4cf;
+
+  --shadow: #000000;
+  --scrim: #000000;
+}

@@ -1,0 +1,12 @@
+@use '../utility';
+
+hddb-page-wrapper {
+  display: block;
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+  main {
+    @include utility.set-style(tertiary-container);
+  }
+}

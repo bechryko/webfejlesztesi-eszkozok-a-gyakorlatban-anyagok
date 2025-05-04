@@ -1,0 +1,99 @@
+@use '../styles/mixins';
+
+#actions-container {
+  display: flex;
+  gap: 1rem;
+  margin-block: 2rem;
+
+  > * {
+    &:first-child {
+      margin-left: auto;
+    }
+
+    &:last-child {
+      margin-right: auto;
+    }
+  }
+
+  input {
+    @include mixins.input($large-spacing: false);
+    font-size: 1.5rem;
+    border: none;
+
+    &::-webkit-search-cancel-button {
+      display: block;
+      color: var(--on-primary-container);
+      -webkit-appearance: none;
+      height: 1.25em;
+      width: 1.25em;
+      background: url(../assets/icons/delete-svgrepo-com.svg) no-repeat;
+      background-size: contain;
+      cursor: pointer;
+    }
+  }
+}
+
+#drinks-container {
+  $spacing: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: $spacing;
+  padding: $spacing;
+}
+
+hddb-drink-tile {
+  position: relative;
+  border: 2px solid var(--default-text-color);
+  padding: 1rem;
+  box-sizing: border-box;
+
+  h3 {
+    margin-block: 0;
+  }
+
+  .category {
+    font-size: 1rem;
+    margin-block: 0 1.5rem;
+    height: 1.5rem;
+  }
+
+  .chip {
+    margin-inline: 0;
+    gap: 0.5rem;
+
+    &.liked {
+      .like {
+        color: green;
+      }
+
+      .dislike {
+        color: red;
+      }
+    }
+  }
+
+  button.delete {
+    $offset: 0.5rem;
+    --_size: 1.75rem;
+
+    position: absolute;
+    top: $offset;
+    right: $offset;
+    background-color: transparent;
+    width: var(--_size);
+    min-inline-size: 0;
+    padding: 0.25rem;
+    box-sizing: border-box;
+  }
+
+  dialog {
+    h4 {
+      text-align: center;
+    }
+
+    .actions-container {
+      @include mixins.actions-container;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@use '../utility';
+
+$spacing: 1rem;
+
+hddb-header {
+  @include utility.set-style(primary-container);
+  user-select: none;
+  padding-block: $spacing;
+}
+
+.title-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: $spacing;
+
+  h1 {
+    text-align: center;
+    margin-bottom: $spacing;
+  }
+
+  img {
+    max-width: 5rem;
+    align-self: center;
+    padding-bottom: 0.5rem;
+
+    &:first-child {
+      justify-self: end;
+    }
+
+    &:last-child {
+      justify-self: start;
+      transform: rotateY(180deg);
+    }
+  }
+}

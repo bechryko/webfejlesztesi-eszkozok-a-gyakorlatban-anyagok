@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <base href=".." />
+    <link
+      rel="icon"
+      href="assets/favicon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/styles.css"
+    />
+    <link
+      rel="stylesheet"
+      href="add-drink-page/add-drink-page.css"
+    />
+  </head>
+  <script src="shared/components/page-wrapper.js"></script>
+  <body>
+    <hddb-page-wrapper page-name="Add drink">
+      <script src="add-drink-page/add-drink-page.js"></script>
+      <script src="drinks-overview-page/services/drinks-service.js"></script>
+      <hddb-header></hddb-header>
+      <main>
+        <h2>Add drink</h2>
+        <form autocomplete="off">
+          <div class="form-field-container">
+            <label for="name">Drink's name</label>
+            <input
+              id="name"
+              type="text"
+              placeholder="Name"
+              required
+            />
+          </div>
+          <div class="form-field-container">
+            <label for="category">Category</label>
+            <select id="category">
+              <option value="coffee">Coffee</option>
+              <option value="hot-chocolate">Hot chocolate</option>
+              <option value="tea">Tea</option>
+              <option value="alcoholic">Alcoholic beverage</option>
+              <option
+                value=""
+                selected
+              >
+                Other
+              </option>
+            </select>
+          </div>
+          <div class="form-field-container">
+            <label for="status">Status</label>
+            <select id="status">
+              <option value="to-drink">To drink</option>
+              <option
+                value="tasted"
+                selected
+              >
+                Tasted
+              </option>
+            </select>
+          </div>
+          <div class="form-field-container">
+            <label for="liked">Liked it</label>
+            <input
+              id="liked"
+              type="checkbox"
+              value="off"
+            />
+          </div>
+          <button
+            id="create-button"
+            class="secondary"
+          >
+            Add new drink to your list
+          </button>
+        </form>
+      </main>
+    </hddb-page-wrapper>
+  </body>
+</html>

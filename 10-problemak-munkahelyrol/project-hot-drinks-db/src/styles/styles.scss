@@ -1,0 +1,8 @@
+@use './components';
+@use './tokens';
+@import url('https://cdn.jsdelivr.net/npm/beercss@3.10.8/dist/cdn/beer.min.css') layer(beer-css);
+
+body {
+  margin: 0;
+  color-scheme: only light;
+}

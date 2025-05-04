@@ -1,0 +1,9 @@
+@mixin actions-container($action-selector: button) {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+
+  #{$action-selector} {
+    flex: 1;
+  }
+}
