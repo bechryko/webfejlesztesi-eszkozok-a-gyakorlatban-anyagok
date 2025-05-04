@@ -1,0 +1,12 @@
+Hot Drinks Database
+4. Nincs mentett ital
+
+Felhasználóként egy üzenetet szeretnék látni, amikor az Italok oldalon nincs egyetlen mentett italom sem. A jelenlegi működés azt az érzetet keltheti, hogy valami hiba történt az italok betöltése közben.
+
+Feladat:
+Ha az Italok oldalon nincsen mentett ital, írj ki egy "No drinks to display" feliratot a képernyő közepére!
+ - fájl: drinks-overview-page.js
+ - ha nincs megjeleníthető ital, egy p elem megjelenítése az adott szöveggel
+ - hogyha csak ez a p van megjelenítve, CSS átírása, hogy a szöveg középre kerüljön
+
+Szerezhető pluszpont: 1

@@ -1,0 +1,10 @@
+Hot Drinks Database
+1. Reszponzivitás telefonon
+
+Felhasználóként szeretném az alkalmazást telefonon is használni, a főoldalon az ajánlott italok viszont túl keskenyek. Szeretném teljes szélességben látni őket, hogy könnyebben tudjak böngészni közöttük. Ugyanez vonatkozik az Új ital oldalon a szövegbeviteli mezőkre, és a navigációs menüre is.
+
+Feladat:
+Ha a képernyő szélessége elég kicsi (~650 pixel)
+ - a Főoldalon az italajánlások és a címeik töltsék ki a teljes képernyőt (csak egy minimális margó legyen).
+ - az Új ital oldalon a szövegbeviteli mezők töltsék ki a teljes képernyőt (csak egy minimális margó legyen).
+ - a navigációs menü gombjai töltsék ki a teljes képernyőt (csak egy minimális margó legyen).

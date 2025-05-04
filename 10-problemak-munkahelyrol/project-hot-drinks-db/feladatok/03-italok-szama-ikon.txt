@@ -1,0 +1,10 @@
+Hot Drinks Database
+3. Italok száma ikon
+
+Felhasználóként szeretném látni minden oldalon, hogy hány italom van elmentve.
+
+Feladat:
+Adj hozzá a navigációs menüben az Italok oldal gombjához egy kis ikont, ami mutatja, hogy adott pillanatban hány mentett itala van a felhasználónak.
+ - használd a projektben használt Beer.css framework "badge" komponensét!
+ - a következő kódsorral tudod biztosítani, hogy a badge-be mindig a megfelelő italszám legyen írva:
+  DrinksService.getInstance().drinks$.subscribe(drinks => (drinkCounterBadge.innerText = drinks.length));

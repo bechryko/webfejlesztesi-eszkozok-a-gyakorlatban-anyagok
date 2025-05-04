@@ -1,0 +1,10 @@
+Hot Drinks Database
+5/1. Ital-ajánló animációja
+
+Felhasználóként szeretnék szebb és konzisztensebb vizuális élményt kapni a Főoldalon az ital-ajánlókat lapozva. Szeretném, ha az ital-ajánló bal oldala mindig egy adott ital bal oldalához illeszkedne, a közöttük lévő lapozást követően is.
+
+Feladat:
+ - az ajánló elemen belül minden ital eleme illeszkedjen az ajánló oldalához automatikusan
+ - videó a megvalósítandó működésről: https://www.youtube.com/watch?v=3yfswsnD2sw
+
+Szerezhető pluszpont: 1

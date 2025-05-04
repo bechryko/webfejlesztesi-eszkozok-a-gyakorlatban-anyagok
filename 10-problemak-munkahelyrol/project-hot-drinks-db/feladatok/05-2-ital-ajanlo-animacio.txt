@@ -1,0 +1,12 @@
+Hot Drinks Database
+5/2. Ital-ajánló animációja
+
+Felhasználóként szeretnék szebb vizuális élményt kapni a Főoldalon az ital-ajánlókat lapozva. Szeretném, ha az ital-ajánló legbaloldalibb eleme, ami a fókuszban van, megnőne, ahogy a bal oldalra kerül, különben pedig fokozatosan csökkenne a mérete.
+
+Feladat:
+ - legyen az ital elemek mérete normál az ital-ajánló közepétől jobbra
+ - ahogy a felhasználó lapozása közben az adott ital balra kerül, fokozatosan nőjön meg, mérete legyen maximális amikor bal oldala az ital-ajánló elem bal oldalához kerül
+ - az elemet tovább lapozva csökkenjen újból a mérete
+ - segítség a megvalósításhoz: szükséges a 'view-timeline' CSS property használata
+
+Szerezhető pluszpont: 2

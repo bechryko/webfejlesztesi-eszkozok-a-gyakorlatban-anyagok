@@ -1,0 +1,11 @@
+Hot Drinks Database
+2. Túl hosszú italnevek
+
+Felhasználóként szeretnék hosszú neveket adni az italoknak, azonban ez jelenleg (vízszintes és függőleges) túlcsordulást eredményezhet az Italok oldalon. Szeretném, ha az Új ital oldalon ne lenne engedélyezve a kényelmetlenül hosszú szövegek beírása, valamint azok az italnevek, amik nem férnek ki teljesen az Italok oldalon, mégis megtekinthetők legyenek.
+
+Feladat:
+ - Legyen az Új ital oldalon az ital nevének hossza lekorlátozva!
+   - A szövegbeviteli mező ne engedjen hosszabbat 50 karakternél.
+   - Hogyha a felhasználó ennél hosszabb szöveget írna be, legyen levágva 50 karakter után mentéskor.
+ - Az Italok oldalon, ha egy Ital neve túl hosszú, legyen levágva a túlcsorduló rész, és jelenjen meg egy "..." a végén.
+ - Ha a felhasználó ráhúzza a kurzort az ital nevére az Italok oldalon, legyen kiírva a teljes név egy tooltip formájában.
