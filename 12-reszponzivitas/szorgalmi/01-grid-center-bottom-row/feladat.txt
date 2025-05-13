@@ -1,2 +1,4 @@
 Az alábbi videóban egy érdekes problémára láthatunk megoldást: https://www.youtube.com/watch?v=HvhSEsFEsAg
 A videóban bemutatott kódot készítsd el mixinben SCSS segítségével, hogy paraméterezhető legyen a maximális oszlopszám, amire a grid működik!
+
+Szerezhető pluszpont: 2

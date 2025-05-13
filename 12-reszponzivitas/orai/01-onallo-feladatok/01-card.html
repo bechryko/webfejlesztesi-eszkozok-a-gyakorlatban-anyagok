@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12. óra - Önálló feladatok: Kártya</title>
+  <style>
+    html {
+      color-scheme: only dark;
+    }
+
+    .card {
+      background-color: hsl(0, 0%, 35%);
+      width: 25rem;
+      border-radius: 2rem;
+      padding: 2rem;
+      margin: 3rem auto;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+
+    img {
+      float: left;
+      margin-right: 1rem;
+    }
+
+    p {
+      text-indent: 2rem;
+      text-align: justify;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 1rem;
+
+      button {
+        flex: 1;
+        font-size: 1rem;
+        padding: 1rem 2rem;
+        cursor: pointer;
+      }
+    }
+
+    /* Kis képernyőméreten a kártya nem reszponzív. Csináld meg, hogy akár 300px széles képernyőn is jól nézzen ki, és a gombok ne egymás mellett, hanem egymás alatt legyenek! */
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Card title</h2>
+    <img src="https://picsum.photos/100/150" alt="random image">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sunt velit, asperiores rerum ratione vero doloremque voluptatibus illum iure. Amet delectus eum nobis minima, doloribus maiores tempore? Dolores, necessitatibus minima consequuntur voluptas dignissimos maxime earum molestiae soluta, nostrum adipisci sequi nesciunt obcaecati voluptate voluptatem sapiente excepturi perspiciatis neque cumque laboriosam.</p>
+    <div class="button-container">
+      <button class="primary">Visit</button>
+      <button class="secondary">Collapse</button>
+    </div>
+  </div>
+</body>
+</html>

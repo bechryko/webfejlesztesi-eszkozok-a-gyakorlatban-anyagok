@@ -1,0 +1,137 @@
+body {
+   margin: 0;
+   min-height: 100dvh;
+   display: grid;
+   grid-template-columns: 1fr 4fr;
+   grid-template-rows: auto 1fr;
+   grid-template-areas:
+      "header header"
+      "aside main";
+
+   /* Hogyha elnevezett grid area-kkal dolgozunk, akkor nagyon könnyű egy media query-ben átalakítani akár a teljes layout-ot. */
+   @media (width <= 800px) { /* ugyanaz, mint a "max-width: 800px" */
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto 1fr;
+      grid-template-areas:
+         "header"
+         "aside"
+         "main";
+   }
+}
+
+header {
+   grid-area: header;
+   display: flex;
+   align-items: center;
+   padding: 1.5rem;
+   background-color: orangered;
+   color: white;
+
+   h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0;
+   }
+
+   .subtitle {
+      font-size: 1.5rem;
+      margin-top: 0;
+   }
+
+   img {
+      margin-left: auto;
+      height: 100px;
+      aspect-ratio: 1;
+   }
+}
+
+aside {
+   grid-area: aside;
+   background-color: orange;
+   border-right: 3px solid orangered;
+
+   /* A 800px-nél kijelölt layout változáshoz igazítjuk az oldal egyéb elemeit is. */
+   @media (width <= 800px) {
+      border-right: none;
+      border-bottom: 3px solid orangered;
+   }
+
+   ul {
+      padding: 1rem;
+      list-style: none;
+
+      li {
+         a {
+            display: block;
+            padding: 1rem 2rem;
+            background-color: yellow;
+
+            &:hover {
+               background-color: rgb(208, 184, 0);
+            }
+
+            &.selected {
+               background-color: rgb(255, 218, 133);
+            }
+         }
+      }
+   }
+
+   .card {
+      margin: 1rem;
+
+      @media (width <= 800px) {
+         margin: 1rem auto;
+      }
+   }
+}
+
+main {
+   grid-area: main;
+   background-color: orange;
+}
+
+.card {
+   background-color: rgb(255, 197, 90);
+   max-width: min(80%, 50rem);
+   padding: 1.5rem;
+   border-radius: 1.5rem;
+   margin: 1.5rem auto;
+
+   h2 {
+      font-size: 2rem;
+      text-wrap: balance;
+   }
+
+   img {
+      width: 10rem;
+      aspect-ratio: 2;
+      float: left;
+      margin-right: 1rem;
+
+      /* Még kisebb képernyőméreten a kártyákon lévő kép elhelyezkedését is megváltoztatjuk kicsit. */
+      @media (width <= 400px) {
+         float: none;
+         display: block;
+         margin-inline: auto;
+         width: 100%;
+         height: unset;
+      }
+      /* Probléma: az aside-ban lévő kártya hiába kicsi, nagy képernyőméreten ugyanolyan lesz a layout-ja, mint a többinek. */
+      /* Hasznos lenne nem a képernyő mérete, hanem a rendelkezésre álló hely alapján változtatni a layout-ját. */
+   }
+
+   button {
+      display: block;
+      font-size: 1.25rem;
+      background-color: orange;
+      margin: 1rem auto 0;
+      padding: 0.5rem 3rem;
+      border: none;
+      cursor: pointer;
+   }
+
+   > :last-child {
+      display: block;
+      clear: left;
+   }
+}

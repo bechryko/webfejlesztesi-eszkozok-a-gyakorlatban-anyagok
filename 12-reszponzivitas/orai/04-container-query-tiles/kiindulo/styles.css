@@ -1,0 +1,73 @@
+
+
+body {
+   --base-color: rgb(255, 226, 215);
+
+   margin: 0;
+   background-color: var(--base-color);
+}
+
+main {
+   display: grid;
+   grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+   grid-template-areas:
+      "tile-1 tile-1 tile-1 tile-2"
+      "tile-1 tile-1 tile-1 tile-3"
+      "tile-4 tile-4 tile-5 tile-5";
+   gap: 0.5rem;
+   padding: 4rem;
+   height: 100dvh;
+   box-sizing: border-box;
+}
+
+.tile {
+   display: grid;
+   place-items: center;
+   position: relative;
+   background-color: red;
+   color: var(--base-color);
+   padding: 0.5rem;
+   min-height: 3rem;
+   border-radius: 0.25rem;
+   cursor: pointer;
+
+   i.fa {
+      aspect-ratio: 1;
+      font-size: 2rem;
+   }
+
+   &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      box-shadow: 0 0 1rem 0.5rem red;
+      opacity: 0;
+      transition: opacity 400ms ease;
+      /* Trükk: ez azért ilyen körülményes, after-elemes opacity-s megoldás, mert ha box-shadow-t akarnánk animálni transition-nel, az sokkal lassabb, mint ha a box-shadow-nak csak az opacity-jét változtatjuk. */
+   }
+
+   &:hover::after {
+      opacity: 1;
+   }
+
+   &:nth-child(1) {
+      grid-area: tile-1;
+   }
+
+   &:nth-child(2) {
+      grid-area: tile-2;
+   }
+
+   &:nth-child(3) {
+      grid-area: tile-3;
+   }
+
+   &:nth-child(4) {
+      grid-area: tile-4;
+   }
+
+   &:nth-child(5) {
+      grid-area: tile-5;
+   }
+}
