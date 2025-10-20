@@ -86,11 +86,9 @@ img.hogwarts-house-badge {
   margin-bottom: 1ch;
   padding: 1ch;
   border-radius: 1ch;
-  background-color: lightgray;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: #343434;
-  }
+  /* A light-dark függvény segítségével meg lehet adni, hogy világos és sötét téma esetén milyen értéket használjon az adott
+  propertyhez */
+  background-color: light-dark(lightgray, #343434);
 }
 
 p {
@@ -107,9 +105,7 @@ p {
     font-style: italic;
   }
 
-  @media(prefers-color-scheme: dark) {
-    strong {
-      color: lightblue;
-    }
+  strong {
+    color: light-dark(navy, lightblue);
   }
 }

@@ -7,10 +7,12 @@ body {
   display: block;
   margin: 0 auto 2rem;
   width: 33%;
+  border-radius: 0.5rem;
   font-size: 1rem;
   background-color: lightblue;
   padding: 1rem;
   border: none;
+  cursor: pointer;
 
   &:active {
     outline: 2px solid blue;

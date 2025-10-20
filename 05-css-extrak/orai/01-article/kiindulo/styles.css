@@ -1,5 +1,4 @@
 :root {
-  color-scheme: light dark;
   font: 1.125rem / 1.25 'Times New Roman', Times, serif;
 }
 
@@ -13,16 +12,8 @@ img.header-image {
   object-fit: cover;
   object-position: right 90%;
 
-  @media (prefers-color-scheme: light) {
-    &.dark {
-      display: none;
-    }
-  }
-
-  @media (prefers-color-scheme: dark) {
-    &.light {
-      display: none;
-    }
+  &.dark {
+    display: none;
   }
 }
 
@@ -63,10 +54,6 @@ img.hogwarts-house-badge {
   padding: 0.5rem;
   border-radius: 0.5rem;
   background-color: lightgray;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: #343434;
-  }
 }
 
 p {
@@ -76,9 +63,7 @@ p {
     font-style: italic;
   }
 
-  @media(prefers-color-scheme: dark) {
-    strong {
-      color: lightblue;
-    }
+  strong {
+    color: navy;
   }
 }
