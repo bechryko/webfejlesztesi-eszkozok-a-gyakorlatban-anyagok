@@ -1,0 +1,20 @@
+:root {
+  --wfeg-biro2-sys-default-font-family: var(--wfeg-biro2-ref-font-family);
+  --wfeg-biro2-sys-long-content-font-size: var(--wfeg-biro2-ref-smallest-font-size);
+  --wfeg-biro2-sys-heading-font-size: var(--wfeg-biro2-ref-larger-font-size);
+  
+  --wfeg-biro2-sys-default-font-color: var(--wfeg-biro2-ref-contrast-900);
+  --wfeg-biro2-sys-secondary-font-color: var(--wfeg-biro2-ref-contrast-600);
+  --wfeg-biro2-sys-highlight-color: var(--wfeg-biro2-ref-primary-500);
+  --wfeg-biro2-sys-highlight-background-color: var(--wfeg-biro2-ref-primary-100);
+  --wfeg-biro2-sys-pale-font-color: var(--wfeg-biro2-ref-contrast-500);
+  --wfeg-biro2-sys-extra-pale-font-color: var(--wfeg-biro2-ref-contrast-400);
+  --wfeg-biro2-sys-background-color: var(--wfeg-biro2-ref-secondary-100);
+  
+  --wfeg-biro2-sys-content-divider-border: var(--wfeg-biro2-ref-border-1);
+  --wfeg-biro2-sys-highlight-border: var(--wfeg-biro2-ref-border-2);
+  
+  --wfeg-biro2-sys-layout-spacing: var(--wfeg-biro2-ref-medium-spacing);
+  
+  --wfeg-biro2-sys-color-change-transition-time: var(--wfeg-biro2-ref-x-short-transition-time);
+}

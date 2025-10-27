@@ -1,0 +1,55 @@
+:root {
+  --wfeg-biro2-comp-language-selector-items-font-weight: var(--wfeg-biro2-ref-bold-font-weight);
+  --wfeg-biro2-comp-sidebar-item-font-size: var(--wfeg-biro2-ref-smaller-font-size);
+  --wfeg-biro2-comp-content-font-size: var(--wfeg-biro2-sys-long-content-font-size);
+  --wfeg-biro2-comp-content-heading-font-weight: var(--wfeg-biro2-ref-semi-bold-font-weight);
+  --wfeg-biro2-comp-content-heading-font-size: var(--wfeg-biro2-sys-heading-font-size);
+  --wfeg-biro2-comp-footer-font-size: var(--wfeg-biro2-ref-smaller-font-size);
+  --wfeg-biro2-comp-footer-line-height: var(--wfeg-biro2-ref-x-large-line-height);
+  --wfeg-biro2-comp-footer-site-reference-font-size: var(--wfeg-biro2-ref-small-font-size);
+  
+  --wfeg-biro2-comp-page-border-top-color: var(--wfeg-biro2-sys-highlight-color);
+  --wfeg-biro2-comp-title-button-background-color: var(--wfeg-biro2-ref-primary-800);
+  --wfeg-biro2-comp-title-button-color: var(--wfeg-biro2-ref-contrast-100);
+  --wfeg-biro2-comp-language-selector-background-color: var(--wfeg-biro2-sys-highlight-background-color);
+  --wfeg-biro2-comp-language-selector-items-color: var(--wfeg-biro2-sys-highlight-color);
+  --wfeg-biro2-comp-language-selector-item-selected-background-color: var(--wfeg-biro2-sys-background-color);
+  --wfeg-biro2-comp-content-heading-background-color: var(--wfeg-biro2-sys-highlight-background-color);
+  --wfeg-biro2-comp-sidebar-item-hover-background-color: var(--wfeg-biro2-sys-highlight-background-color);
+  --wfeg-biro2-comp-content-heading-color: var(--wfeg-biro2-sys-highlight-color);
+  --wfeg-biro2-comp-footer-copyright-color: var(--wfeg-biro2-sys-pale-font-color);
+  --wfeg-biro2-comp-footer-site-reference-color: var(--wfeg-biro2-sys-extra-pale-font-color);
+  
+  --wfeg-biro2-comp-header-box-shadow: var(--wfeg-biro2-ref-box-shadow-1);
+  --wfeg-biro2-comp-sidebar-box-shadow: var(--wfeg-biro2-ref-box-shadow-2);
+  --wfeg-biro2-comp-content-box-shadow: var(--wfeg-biro2-ref-box-shadow-2);
+  
+  --wfeg-biro2-comp-header-top-border: var(--wfeg-biro2-ref-border-3);
+  --wfeg-biro2-comp-main-content-divider-border: var(--wfeg-biro2-sys-content-divider-border);
+  --wfeg-biro2-comp-main-content-table-border: var(--wfeg-biro2-ref-border-0);
+  --wfeg-biro2-comp-sidebar-item-hover-border-left: var(--wfeg-biro2-sys-highlight-border);
+  
+  --wfeg-biro2-comp-vertical-layout-spacing: var(--wfeg-biro2-sys-layout-spacing);
+  --wfeg-biro2-comp-main-section-horizontal-spacing: var(--wfeg-biro2-sys-layout-spacing);
+  --wfeg-biro2-comp-header-padding: var(--wfeg-biro2-ref-small-spacing);
+  --wfeg-biro2-comp-title-button-padding: var(--wfeg-biro2-ref-small-spacing);
+  --wfeg-biro2-comp-language-selector-padding: var(--wfeg-biro2-ref-xx-small-spacing);
+  --wfeg-biro2-comp-language-selector-item-horizontal-padding: var(--wfeg-biro2-ref-x-small-spacing);
+  --wfeg-biro2-comp-language-selector-item-vertical-padding: var(--wfeg-biro2-ref-xx-small-spacing);
+  --wfeg-biro2-comp-sidebar-item-horizontal-padding: var(--wfeg-biro2-ref-medium-spacing);
+  --wfeg-biro2-comp-sidebar-item-vertical-padding: var(--wfeg-biro2-ref-small-spacing);
+  --wfeg-biro2-comp-content-card-table-top-spacing: var(--wfeg-biro2-ref-small-spacing);
+  --wfeg-biro2-comp-content-card-table-bottom-spacing: var(--wfeg-biro2-ref-large-spacing);
+  --wfeg-biro2-comp-content-card-table-cell-horizontal-padding: var(--wfeg-biro2-ref-local-small-spacing);
+  --wfeg-biro2-comp-content-card-table-cell-vertical-padding: var(--wfeg-biro2-ref-local-x-small-spacing);
+  --wfeg-biro2-comp-footer-vertical-padding: var(--wfeg-biro2-ref-large-spacing);
+  
+  --wfeg-biro2-comp-title-button-hover-transition-time: var(--wfeg-biro2-ref-short-transition-time);
+  --wfeg-biro2-comp-sidebar-item-hover-transition-time: var(--wfeg-biro2-sys-color-change-transition-time);
+  --wfeg-biro2-comp-title-button-border-radius: var(--wfeg-biro2-ref-small-border-radius);
+  --wfeg-biro2-comp-title-button-hover-scale-ratio: var(--wfeg-biro2-ref-small-hover-scale-ratio);
+  --wfeg-biro2-comp-language-selector-height: var(--wfeg-biro2-ref-medium-element-size);
+  --wfeg-biro2-comp-language-selector-item-width: var(--wfeg-biro2-ref-medium-element-size);
+  --wfeg-biro2-comp-content-card-border-radius: var(--wfeg-biro2-ref-small-border-radius);
+  --wfeg-biro2-comp-content-card-header-padding: var(--wfeg-biro2-ref-local-small-spacing);
+}

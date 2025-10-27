@@ -1,0 +1,61 @@
+:root {
+  --wfeg-biro2-ref-font-family: 'Segoe UI', Arial, sans-serif;
+  --wfeg-biro2-ref-semi-bold-font-weight: 500;
+  --wfeg-biro2-ref-bold-font-weight: 700;
+  --wfeg-biro2-ref-smallest-font-size: 0.75em;
+  --wfeg-biro2-ref-smaller-font-size: 0.8em;
+  --wfeg-biro2-ref-larger-font-size: 1.5em;
+  --wfeg-biro2-ref-small-font-size: 0.75rem;
+  --wfeg-biro2-ref-large-line-height: 1.5;
+  --wfeg-biro2-ref-x-large-line-height: 2;
+  
+  --wfeg-biro2-ref-primary-100: #e5e9ff;
+  --wfeg-biro2-ref-primary-200: #afb8e7;
+  --wfeg-biro2-ref-primary-300: #8a98df;
+  --wfeg-biro2-ref-primary-400: #6d7ed5;
+  --wfeg-biro2-ref-primary-500: #4158d0;
+  --wfeg-biro2-ref-primary-600: #34459a;
+  --wfeg-biro2-ref-primary-700: #2f3b74;
+  --wfeg-biro2-ref-primary-800: #282f57;
+  --wfeg-biro2-ref-primary-900: #1b203d;
+  --wfeg-biro2-ref-contrast-100: white;
+  --wfeg-biro2-ref-contrast-200: #eee;
+  --wfeg-biro2-ref-contrast-300: #bbb;
+  --wfeg-biro2-ref-contrast-400: #999;
+  --wfeg-biro2-ref-contrast-500: #666;
+  --wfeg-biro2-ref-contrast-600: #495057;
+  --wfeg-biro2-ref-contrast-700: #32383e;
+  --wfeg-biro2-ref-contrast-800: #23272c;
+  --wfeg-biro2-ref-contrast-900: black;
+  --wfeg-biro2-ref-secondary-100: white;
+  --wfeg-biro2-ref-secondary-200: rgba(87, 96, 104, 0.3);
+  --wfeg-biro2-ref-secondary-300: rgba(33, 37, 41, 0.3);
+  
+  --wfeg-biro2-ref-box-shadow-1: 0 0 10px rgb(202, 202, 202);
+  --wfeg-biro2-ref-box-shadow-2: 0 0 10px rgb(233, 233, 233);
+  
+  --wfeg-biro2-ref-border-0: 1px solid rgb(225, 225, 225);
+  --wfeg-biro2-ref-border-1: 1px solid lightgray;
+  --wfeg-biro2-ref-border-2: 3px solid var(--wfeg-biro2-ref-primary-500);
+  --wfeg-biro2-ref-border-3: 0.5rem solid var(--wfeg-biro2-ref-primary-500);
+  
+  --wfeg-biro2-ref-xx-small-spacing: 0.25rem;
+  --wfeg-biro2-ref-x-small-spacing: 0.5rem;
+  --wfeg-biro2-ref-small-spacing: 1rem;
+  --wfeg-biro2-ref-medium-spacing: 2rem;
+  --wfeg-biro2-ref-large-spacing: 3rem;
+  --wfeg-biro2-ref-local-xx-small-spacing: 0.25em;
+  --wfeg-biro2-ref-local-x-small-spacing: 0.5em;
+  --wfeg-biro2-ref-local-small-spacing: 1em;
+  --wfeg-biro2-ref-local-medium-spacing: 2em;
+  --wfeg-biro2-ref-local-large-spacing: 3em;
+  
+  --wfeg-biro2-ref-x-short-transition-time: 200ms;
+  --wfeg-biro2-ref-short-transition-time: 400ms;
+  --wfeg-biro2-ref-small-border-radius: 0.5rem;
+  --wfeg-biro2-ref-medium-border-radius: 1rem;
+  --wfeg-biro2-ref-large-border-radius: 2rem;
+  --wfeg-biro2-ref-small-hover-scale-ratio: 1.05;
+  --wfeg-biro2-ref-medium-element-size: 2rem;
+  --wfeg-biro2-ref-large-element-size: 3.5rem;
+}
