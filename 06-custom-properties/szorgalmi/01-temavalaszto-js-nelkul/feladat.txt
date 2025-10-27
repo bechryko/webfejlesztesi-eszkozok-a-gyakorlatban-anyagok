@@ -1,0 +1,4 @@
+Csinálj egy nagyon minimalista HTML oldalt (pár elem, példaszövegek (pl. lorem ipsum)) legalább 3 különböző szín használatával (az alap betűszínen kívül), és készíts el hozzá egy színtémaválasztót, teljes mértékben JavaScript használata nélkül! (Tehát nem használhatsz és importálhatsz .js fájlokat, script tag-eket és nem használhatsz HTML attribútumokat sem JS kód írására (pl. onclick).)
+Egy HTML fájlt (amennyiben style tag-et használtál) vagy egy HTML és egy CSS/SCSS fájlt adj be, ami tartalmazza az egyszerű oldalt és a színtámaválasztót!
+
+Szerezhető pluszpont: 2

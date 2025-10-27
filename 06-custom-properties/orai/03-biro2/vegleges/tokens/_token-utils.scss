@@ -1,7 +1,7 @@
-$tokens-prefix: biro2;
+$tokens-prefix: wfeg-biro2;
 
 /* segédfüggvény, ami beregisztrálja az adott típusú design tokeneket a root
-elemen, és sok gépelés (projekt prefix, token típus) megspórol a fejlesztőnek */
+elemen, és sok gépelést (projekt prefix, token típus) megspórol a fejlesztőnek */
 @mixin register-tokens($token-type, $token-map) {
   :root {
     @each $name, $value in $token-map {

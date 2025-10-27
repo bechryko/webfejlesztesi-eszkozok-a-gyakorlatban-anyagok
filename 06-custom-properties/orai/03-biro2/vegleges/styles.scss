@@ -16,12 +16,12 @@ mihamarabbi eligazodását rajtuk. */
 kiírtam a teljes token neveket, hogy jobban látsszon, pontosan mi történik */
 body {
   display: grid;
-  row-gap: var(--biro2-comp-vertical-layout-spacing);
+  row-gap: var(--wfeg-biro2-comp-vertical-layout-spacing);
   grid-template-columns:
-    var(--biro2-comp-main-section-horizontal-spacing)
+    var(--wfeg-biro2-comp-main-section-horizontal-spacing)
     1fr
     4fr
-    var(--biro2-comp-main-section-horizontal-spacing);
+    var(--wfeg-biro2-comp-main-section-horizontal-spacing);
   /* talán a sidebar és a content arányát is ki lehetne vinni egy design
   tokenbe, de ezt még talán viszonylag egyszerű változtatni ebben a formában,
   design tokenként, aminek megfelelően magától értetődő az értéke, pedig nehezen
@@ -34,8 +34,8 @@ body {
     "footer  footer  footer  footer ";
   min-height: 100dvh;
   margin: 0;
-  color: var(--biro2-sys-default-font-color);
-  font-family: var(--biro2-sys-default-font-family);
+  color: var(--wfeg-biro2-sys-default-font-color);
+  font-family: var(--wfeg-biro2-sys-default-font-family);
 }
 
 header {
@@ -43,31 +43,31 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--biro2-comp-header-padding);
-  box-shadow: var(--biro2-comp-header-box-shadow);
-  border-top: var(--biro2-comp-header-top-border);
+  padding: var(--wfeg-biro2-comp-header-padding);
+  box-shadow: var(--wfeg-biro2-comp-header-box-shadow);
+  border-top: var(--wfeg-biro2-comp-header-top-border);
 
   .logo-link .logo-container {
-    padding: var(--biro2-comp-title-button-padding);
-    background-color: var(--biro2-comp-title-button-background-color);
-    color: var(--biro2-comp-title-button-color);
+    padding: var(--wfeg-biro2-comp-title-button-padding);
+    background-color: var(--wfeg-biro2-comp-title-button-background-color);
+    color: var(--wfeg-biro2-comp-title-button-color);
     font-weight: bold;
-    border-radius: var(--biro2-comp-title-button-border-radius);
+    border-radius: var(--wfeg-biro2-comp-title-button-border-radius);
     user-select: none;
     cursor: pointer;
-    transition: transform var(--biro2-comp-title-button-hover-transition-time)
+    transition: transform var(--wfeg-biro2-comp-title-button-hover-transition-time)
       ease;
 
     &:hover {
-      transform: scale(var(--biro2-comp-title-button-hover-scale-ratio));
+      transform: scale(var(--wfeg-biro2-comp-title-button-hover-scale-ratio));
     }
   }
 
   #lang-switch {
-    $switch-height: var(--biro2-comp-language-selector-height);
-    $padding: var(--biro2-comp-language-selector-padding);
+    $switch-height: var(--wfeg-biro2-comp-language-selector-height);
+    $padding: var(--wfeg-biro2-comp-language-selector-padding);
 
-    background-color: var(--biro2-comp-language-selector-background-color);
+    background-color: var(--wfeg-biro2-comp-language-selector-background-color);
     display: flex;
     align-items: stretch;
     padding: $padding;
@@ -77,21 +77,21 @@ header {
     sokszor kiírni a tokenek hosszú neveit) */
     border-radius: calc($switch-height / 2 + $padding);
     height: $switch-height;
-    font-weight: var(--biro2-comp-language-selector-items-font-weight);
+    font-weight: var(--wfeg-biro2-comp-language-selector-items-font-weight);
     user-select: none;
 
     a {
-      color: var(--biro2-comp-language-selector-items-color);
-      padding: var(--biro2-comp-language-selector-item-vertical-padding)
-        var(--biro2-comp-language-selector-item-horizontal-padding);
+      color: var(--wfeg-biro2-comp-language-selector-items-color);
+      padding: var(--wfeg-biro2-comp-language-selector-item-vertical-padding)
+        var(--wfeg-biro2-comp-language-selector-item-horizontal-padding);
       border-radius: calc($switch-height / 2);
-      min-width: var(--biro2-comp-language-selector-item-width);
+      min-width: var(--wfeg-biro2-comp-language-selector-item-width);
       text-align: center;
       cursor: pointer;
 
       &.active {
         background-color: var(
-          --biro2-comp-language-selector-item-selected-background-color
+          --wfeg-biro2-comp-language-selector-item-selected-background-color
         );
       }
     }
@@ -102,7 +102,7 @@ aside {
   grid-area: sidebar;
   display: flex;
   align-items: center;
-  box-shadow: var(--biro2-comp-sidebar-box-shadow);
+  box-shadow: var(--wfeg-biro2-comp-sidebar-box-shadow);
 
   ul {
     list-style: none;
@@ -112,16 +112,16 @@ aside {
   }
 
   li {
-    font-size: var(--biro2-comp-sidebar-item-font-size);
-    padding: var(--biro2-comp-sidebar-item-vertical-padding)
-      var(--biro2-comp-sidebar-item-horizontal-padding);
+    font-size: var(--wfeg-biro2-comp-sidebar-item-font-size);
+    padding: var(--wfeg-biro2-comp-sidebar-item-vertical-padding)
+      var(--wfeg-biro2-comp-sidebar-item-horizontal-padding);
     text-wrap: wrap;
     cursor: pointer;
-    border-left: var(--biro2-comp-sidebar-item-hover-border-left);
-    transition: all var(--biro2-comp-sidebar-item-hover-transition-time) ease;
+    border-left: var(--wfeg-biro2-comp-sidebar-item-hover-border-left);
+    transition: all var(--wfeg-biro2-comp-sidebar-item-hover-transition-time) ease;
 
     &:hover {
-      background-color: var(--biro2-comp-sidebar-item-hover-background-color);
+      background-color: var(--wfeg-biro2-comp-sidebar-item-hover-background-color);
     }
 
     &:not(:hover) {
@@ -132,25 +132,25 @@ aside {
 
 main {
   grid-area: content;
-  box-shadow: var(--biro2-comp-content-box-shadow);
-  font-size: var(--biro2-comp-content-font-size);
+  box-shadow: var(--wfeg-biro2-comp-content-box-shadow);
+  font-size: var(--wfeg-biro2-comp-content-font-size);
   height: fit-content;
 
   .card {
-    border: var(--biro2-comp-main-content-divider-border);
-    border-radius: var(--biro2-comp-content-card-border-radius);
+    border: var(--wfeg-biro2-comp-main-content-divider-border);
+    border-radius: var(--wfeg-biro2-comp-content-card-border-radius);
 
     .card-header {
-      color: var(--biro2-comp-content-heading-color);
-      background-color: var(--biro2-comp-content-heading-background-color);
-      border-bottom: var(--biro2-comp-main-content-divider-border);
-      padding: var(--biro2-comp-content-card-header-padding);
+      color: var(--wfeg-biro2-comp-content-heading-color);
+      background-color: var(--wfeg-biro2-comp-content-heading-background-color);
+      border-bottom: var(--wfeg-biro2-comp-main-content-divider-border);
+      padding: var(--wfeg-biro2-comp-content-card-header-padding);
 
       h1 {
         text-align: center;
         margin: 0;
-        font-size: var(--biro2-comp-content-heading-font-size);
-        font-weight: var(--biro2-comp-content-heading-font-weight);
+        font-size: var(--wfeg-biro2-comp-content-heading-font-size);
+        font-weight: var(--wfeg-biro2-comp-content-heading-font-weight);
       }
     }
 
@@ -159,16 +159,16 @@ main {
       margin: auto;
 
       table {
-        margin: var(--biro2-comp-content-card-table-top-spacing) auto
-          var(--biro2-comp-content-card-table-bottom-spacing);
+        margin: var(--wfeg-biro2-comp-content-card-table-top-spacing) auto
+          var(--wfeg-biro2-comp-content-card-table-bottom-spacing);
         border-collapse: collapse;
 
         th,
         td {
           text-align: start;
-          border: var(--biro2-comp-main-content-table-border);
-          padding: var(--biro2-comp-content-card-table-cell-vertical-padding)
-            var(--biro2-comp-content-card-table-cell-horizontal-padding);
+          border: var(--wfeg-biro2-comp-main-content-table-border);
+          padding: var(--wfeg-biro2-comp-content-card-table-cell-vertical-padding)
+            var(--wfeg-biro2-comp-content-card-table-cell-horizontal-padding);
         }
       }
     }
@@ -177,15 +177,15 @@ main {
 
 footer {
   grid-area: footer;
-  color: var(--biro2-comp-footer-copyright-color);
+  color: var(--wfeg-biro2-comp-footer-copyright-color);
   text-align: center;
-  padding-block: var(--biro2-comp-footer-vertical-padding);
-  font-size: var(--biro2-comp-footer-font-size);
-  line-height: var(--biro2-comp-footer-line-height);
+  padding-block: var(--wfeg-biro2-comp-footer-vertical-padding);
+  font-size: var(--wfeg-biro2-comp-footer-font-size);
+  line-height: var(--wfeg-biro2-comp-footer-line-height);
 
   .site-reference {
-    color: var(--biro2-comp-footer-site-reference-color);
-    font-size: var(--biro2-comp-footer-site-reference-font-size);
+    color: var(--wfeg-biro2-comp-footer-site-reference-color);
+    font-size: var(--wfeg-biro2-comp-footer-site-reference-font-size);
 
     a {
       color: inherit;
