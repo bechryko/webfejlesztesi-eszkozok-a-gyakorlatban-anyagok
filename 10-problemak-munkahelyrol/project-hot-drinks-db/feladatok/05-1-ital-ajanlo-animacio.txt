@@ -7,4 +7,4 @@ Feladat:
  - az ajánló elemen belül minden ital eleme illeszkedjen az ajánló oldalához automatikusan
  - videó a megvalósítandó működésről: https://www.youtube.com/watch?v=3yfswsnD2sw
 
-Szerezhető pluszpont: 1
+Szerezhető pluszpont: 2

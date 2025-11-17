@@ -9,4 +9,4 @@ Feladat:
  - az elemet tovább lapozva csökkenjen újból a mérete
  - segítség a megvalósításhoz: szükséges a 'view-timeline' CSS property használata
 
-Szerezhető pluszpont: 2
+Szerezhető pluszpont: 3

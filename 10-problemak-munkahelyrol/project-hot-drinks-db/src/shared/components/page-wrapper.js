@@ -1,6 +1,5 @@
 class PageWrapper extends HTMLElement {
   static #RXJS_SRC = 'https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.8.1/rxjs.umd.js';
-  static #BEER_CSS_STYLE_SRC = 'https://cdn.jsdelivr.net/npm/beercss@3.10.8/dist/cdn/beer.min.css';
   static #BEER_CSS_SCRIPT_SRC = 'https://cdn.jsdelivr.net/npm/beercss@3.10.8/dist/cdn/beer.min.js';
   static #BEER_CSS_DYNAMIC_COLORS_SCRIPT_SRC =
     'https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js';
@@ -18,10 +17,6 @@ class PageWrapper extends HTMLElement {
 
   #addScripts() {
     createChild(this, 'script', { src: PageWrapper.#RXJS_SRC });
-    // createChild(this, 'link', {
-    //   href: PageWrapper.#BEER_CSS_STYLE_SRC,
-    //   rel: 'stylesheet'
-    // });
     createChild(this, 'script', {
       src: PageWrapper.#BEER_CSS_SCRIPT_SRC,
       type: 'module'

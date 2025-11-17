@@ -31,7 +31,7 @@ function removeAllChildren(parent) {
 
 function getFilteredDrinks(drinks, query) {
   return drinks.filter(drink => {
-    if (drink.name.includes(query)) {
+    if (drink.name.toLowerCase().includes(query.toLowerCase())) {
       return true;
     }
     return false;
