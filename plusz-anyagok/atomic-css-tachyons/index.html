@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Plusz anyagok - Tachyons</title>
-    <!-- Külső stílusok -->
+    <!-- Tachyons: külső stílusok -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/tachyons/css/tachyons.min.css"
@@ -26,6 +26,11 @@
       }
     </style>
   </head>
+  <!-- A Tachyons lényege, hogy próbálunk minél kevesebb stílust definiálni CSS-ben, és a lehető legtöbbet a HTML-ben.
+    Ehhez úgynevezett atomi CSS stílusokat használunk, ami azt jelenti, hogy lényegében egy-egy CSS property-ért hozunk
+    létre egy új class-t, és azokat használjuk annyi helyen, amennyi helyen csak lehet. -->
+  <!-- A Tachyons rengeteg ilyen class-t biztosít, amiket itt tudtok böngészni (class és CSS property szerinti bontásban is):
+    https://tachyons.io/docs/ -->
   <body class="debug-grid-16 tj">
     <main class="pa4 bg-washed-yellow">
       <h1 class="tc">Title</h1>

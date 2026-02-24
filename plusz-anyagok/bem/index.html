@@ -3,62 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Plusz anyagok - BEM</title>
-    <style>
-      body {
-        margin: 0;
-      }
-
-      main {
-        max-width: 50rem;
-        height: 100dvh;
-        margin: auto;
-        background-color: #ffffd7;
-        padding: 2rem;
-        box-sizing: border-box;
-      }
-
-      h1,
-      h2 {
-        text-align: center;
-      }
-
-      .columns-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-        margin-bottom: 1rem;
-      }
-
-      .columns-container__column {
-        border-radius: 0.5rem;
-        padding: 1.5rem;
-        box-shadow: 3px 3px 5px #646464;
-      }
-
-      /*      BLOCK      ELEMENT  MODIFIER */
-      .columns-container__column--light {
-        background-color: #ffefb4;
-      }
-
-      .columns-container__column-dark {
-        background-color: #433d24;
-        color: white;
-      }
-
-      .main__paragraph {
-        font-size: 1.5rem;
-        margin-top: 3rem;
-        text-align: justify;
-      }
-
-      .main__paragraph--highlight {
-        font-style: italic;
-      }
-
-      .column__paragraph--highlight {
-        font-style: italic;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <main>
@@ -81,7 +26,7 @@
             voluptatum repudiandae.
           </p>
         </div>
-        <div class="columns-container__column columns-container__column-dark">
+        <div class="columns-container__column columns-container__column--dark">
           <h2>Column title 2</h2>
           <p class="column__paragraph--highlight">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
