@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+}
+
+main {
+  max-width: 50rem;
+  height: 100dvh;
+  margin: auto;
+  background-color: #ffffd7;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.columns-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.columns-container__column {
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 3px 3px 5px #646464;
+}
+
+/* A BEM (Block, Element, Modifier) egy CSS osztály elnevezési módszertan, ami három szintet különböztet meg. A Block
+  egy önmagában is kiemelkedő elem, egy container, amiben több kisebb elemet helyezünk el. Az Element a konkrét elem,
+  aminek önmagában nincsen jelentése, csak a container-ével (Block) együtt. A Modifier pedig az adott Element-en különböző
+  állapotokat, megkülönböztető jelzőket jelent (pl. hover state, vagy színtémák). */
+/*      BLOCK      ELEMENT  MODIFIER */
+.columns-container__column--light {
+  background-color: #ffefb4;
+}
+
+.columns-container__column--dark {
+  background-color: #433d24;
+  color: white;
+}
+
+.main__paragraph {
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  text-align: justify;
+}
+
+.main__paragraph--highlight {
+  font-style: italic;
+}
+
+.column__paragraph--highlight {
+  font-style: italic;
+}
+
+/* SCSS segítségével sokkal könnyebb strukturálni ezeket a stílusokat, mint sima CSS-ben, lásd: scss-styles.scss */

@@ -1,0 +1,2 @@
+Másold le az example.png képen látható weboldalt minél pontosabban! (A képnél csak annyi az elvárás, hogy egy aranyos kiscica legyen ratja!) Használd a Tachyons-t (https://unpkg.com/tachyons/css/tachyons.min.css), ne írj kézzel semmiféle CSS-t!
+Példamegoldást a megoldas mappában találsz, de természetesen nem csak így lehet dolgozni!
