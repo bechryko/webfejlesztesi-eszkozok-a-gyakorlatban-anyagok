@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "pranaygp.vscode-css-peek",
-    "kisstkondoros.csstriggers"
+    "kisstkondoros.csstriggers",
+    "pushqrdx.inline-html"
   ]
 }

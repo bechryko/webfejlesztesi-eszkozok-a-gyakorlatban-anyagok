@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>2. óra - At-scope experimental</title>
+    <title>2. óra - Attr() unsupported</title>
     <style>
       body {
         margin: 0;
@@ -29,7 +29,7 @@
 
       .columns-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(attr(data-columns type(<number>)), 1fr);
         gap: 1rem;
         margin-bottom: 1rem;
 
@@ -39,12 +39,6 @@
           padding: 1.5rem;
           box-shadow: 3px 3px 5px #646464;
           text-align: start;
-        }
-      }
-
-      @scope (main) to (.columns-container) {
-        p {
-          color: red;
         }
       }
     </style>
@@ -58,7 +52,7 @@
         quam praesentium ducimus, numquam dicta, pariatur necessitatibus nam
         error a eum beatae illum tempora omnis soluta?
       </p>
-      <div class="columns-container">
+      <div class="columns-container" data-columns="3">
         <div class="column">
           <h2>Column title 1</h2>
           <p>

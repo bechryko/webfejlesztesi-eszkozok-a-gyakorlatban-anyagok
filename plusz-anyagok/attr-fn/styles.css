@@ -17,3 +17,5 @@
 .card {
   border: 1px solid black;
 }
+
+/* Bónusz: Chrome és Edge devtools-ban, ha megkeresitek az attr függvényt, hoverre kiírja, hogy mi az értéke az attribútumnak az adott helyen. Hogyha pedig a CSS szabályban az attribútum nevére kattintotok, a DOM-on odavisz, ahol az attribútum meg van adva. */
