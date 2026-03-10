@@ -1,0 +1,2 @@
+Egészítsd ki a _card-background.scss fájlban lévő get-card-background-color függvényt, hogy eleget tegyen a kommentben írtaknak!
+Példamegoldást a megoldas mappában találsz!

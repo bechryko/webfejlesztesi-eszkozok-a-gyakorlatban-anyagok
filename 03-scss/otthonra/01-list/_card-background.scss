@@ -1,0 +1,12 @@
+// a listákhoz való segédfüggvényeket a 'sass:list'-ből importálhatjuk, ekkor a namespace 'list' lesz
+@use "sass:list";
+
+// listát sokféleképpen létrehozhatunk, az egyik mód vesszővel elválasztott értékekkel (a többit a SASS dokumentációjában elolvashatjátok)
+$card-color-list:
+  rebeccapurple, darkorange, darkslateblue, darkolivegreen, darkgoldenrod,
+  darkcyan, darkmagenta, darkturquoise, darkviolet, darksalmon;
+
+@function get-card-background-color($index) {
+  // feladat: itt ne minden esetben a rebeccapurple színt használjuk alapként, hanem használjuk a lista adott elemét!
+  @return hsl(from rebeccapurple h s #{5% + $index * 10%});
+}

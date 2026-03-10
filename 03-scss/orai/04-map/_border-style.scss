@@ -1,5 +1,3 @@
-// A fájl neve előtti _ jelzi, hogy ez egy "partial" forrásfájl, azaz nem kell lefordítani külön CSS fájlba, mert a fő SCSS fájl (styles.scss) használja
-
 @mixin light-gray-border($radius: 2rem, $border-box: off) {
   border: 1px solid lightgray;
   border-radius: $radius;
