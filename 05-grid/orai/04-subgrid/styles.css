@@ -31,7 +31,7 @@ main {
   grid-row: span 3;
   /* legyen ez is grid */
   display: grid;
-  /* és a varázslat: örökölje meg a szülő grid sorait: mivel 3 sor magas az elem, ezért ez a 3 sor belül is elérhető lesz */
+  /* örökölje meg a szülő grid sorait (= legyen subgrid): mivel 3 sor magas az elem, ezért ez a 3 sor belül is elérhető lesz */
   grid-template-rows: subgrid;
   /* nem szeretnénk, hogy itt legyen gap, ezért ki lehet kapcsolni */
   /* ettől még a külső gridben lesznek gap-ek, valamint kicsit belerondítanak a belső méretekbe, de ha automatikus magasságokat használunk, nem lesz belőle baj */
