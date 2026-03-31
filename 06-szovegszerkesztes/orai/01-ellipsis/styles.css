@@ -1,0 +1,37 @@
+body {
+  height: 100dvh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+
+  p {
+    width: 250px;
+  }
+}
+
+/* Single-line ellipsis */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-overflow */
+/* p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+} */
+
+/* Multi-line ellipsis */
+/* https://stackoverflow.com/questions/3922739/limit-text-length-to-n-lines-using-css */
+/* p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2; 
+  -webkit-box-orient: vertical;
+} */

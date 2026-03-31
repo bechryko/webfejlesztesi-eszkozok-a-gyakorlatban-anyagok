@@ -35,7 +35,9 @@ article {
   /* A column-width property megadja, hogy egy multi-column layout-ban ideális esetben milyen szélesek legyenek az oszlopok */
   /* A ch egység arányos a karakterek szélességével az adott helyen, ezért szövegeknél érdemes ezt használni, hogy megmondjuk, milyen szélesre akarunk hagyni egy sort */
   column-width: 30ch;
+  /* A column-gap (vagy simán gap is használható) az oszlopok közötti térközt adja meg, a column-rule pedig a térköz közepén húzódó vonalat (mintha egy border lenne) */
   column-gap: 2em;
+  column-rule: 1px solid black;
   /* Megmondja, hogy legalább hány sor szövegnek kell lennie egy oszlop alján (ha tud) */
   orphans: 3;
   /* Megmondja, hogy legalább hány sor szövegnek kell lennie egy oszlop tetején (ha tud) */
