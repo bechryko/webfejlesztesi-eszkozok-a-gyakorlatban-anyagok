@@ -1,0 +1,30 @@
+@use "./token-utils" as *;
+
+$typography-tokens: (
+  default-font-family: get-token-value(ref, font-family),
+  long-content-font-size: get-token-value(ref, smallest-font-size),
+  heading-font-size: get-token-value(ref, larger-font-size)
+);
+
+$color-tokens: (
+  default-font-color: get-token-value(ref, contrast-900),
+  secondary-font-color: get-token-value(ref, contrast-600),
+  highlight-color: get-token-value(ref, primary-500),
+  highlight-background-color: get-token-value(ref, primary-100),
+  pale-font-color: get-token-value(ref, contrast-500),
+  extra-pale-font-color: get-token-value(ref, contrast-400),
+  background-color: get-token-value(ref, secondary-100)
+);
+
+$border-tokens: (
+  content-divider-border: get-token-value(ref, border-1),
+  highlight-border: get-token-value(ref, border-2)
+);
+
+$spacing-tokens: (
+  layout-spacing: get-token-value(ref, medium-spacing)
+);
+
+$other-tokens: (
+  color-change-transition-time: get-token-value(ref, x-short-transition-time)
+);

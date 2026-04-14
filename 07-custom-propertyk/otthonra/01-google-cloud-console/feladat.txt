@@ -1,0 +1,5 @@
+A Google Cloud Console a következő URL-en érhető el: https://console.cloud.google.com/
+
+A DevTools segítségével vizsgálj meg különböző elemeket, és nézd meg, milyen design tokenek vannak jelen az adott elemen!
+Mit gondolsz, milyen tokenek vannak használva az oldalon? Csak a Google Cloud Console saját tokenjei, vagy külsők is?
+Végignézve a tokeneken, hány szintű lehet a Google Cloud Console design rendszere?

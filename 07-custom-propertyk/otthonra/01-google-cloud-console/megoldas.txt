@@ -1,0 +1,5 @@
+Mit gondolsz, milyen tokenek vannak használva az oldalon? Csak a Google Cloud Console saját tokenjei, vagy külsők is?
+Válasz: Valószínűleg nem csak a GCC tokenjei vannak használva, mivel, egy elemen a tokeneket megnézve, jelen vannak "cm", "ac" és "mat" kezdetűek is, tehát valószínűleg külső tokenek is fel vannak használva. (A Google UI komponenseket tartalmazó könyvtárának, a Material-nak a prefixe a "mat".)
+
+Végignézve a tokeneken, hány szintű lehet a Google Cloud Console design rendszere?
+Válasz: A legtöbb token konkrét értéket használ fel. Van néhány, ami másik tokenre mutat, de alapvetően ki lehet jelenteni, hogy egy szintje van ennek a design rendszernek.

@@ -34,14 +34,14 @@ h1, h2 {
     border-radius: 0.5rem;
     background-color: #ffefb4;
     padding: 1.5rem;
-    box-shadow: 3px 3px 5px black;
+    box-shadow: 3px 3px 5px currentColor;
     text-align: start;
     transition: all 0.5s ease;
     user-select: none;
 
     &:hover {
       transform: scale(1.1);
-      box-shadow: 3px 3px 30px black;
+      box-shadow: 3px 3px 30px currentColor;
     }
 
     &.fantasy {
