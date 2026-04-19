@@ -1,10 +1,16 @@
+<!-- Az oldalon egy CSS keretrendszert, a 98.css-t használok, hogy minél jobban leutánozzak egy Windows 98 kinézetet.
+Kézzel is meg lehetne írni ezeket a stílusokat, de miért tennénk meg, ha valaki már egyszer megírta őket?
+A dokumentációjánál részletes leírást lehet olvasni példakóddal, hogy hogyan kell használni a kinézeteket:
+https://jdan.github.io/98.css/ -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>8. óra - Windows 98</title>
-    <link rel="stylesheet" href="https://jdan.github.io/98.css/98.css" />
+    <!-- Link a stíluslapra, ami a weboldalon is fel van tüntetve -->
+    <link rel="stylesheet" href="https://unpkg.com/98.css" />
     <style>
+      /* Kiegészítő stílusokat így is lehet (és sokszor elkerülhetetlen) írni, de ezek leginkább az elemek elhelyezkedéséért felelősek. */
       body {
         background-image: url("https://archive.org/download/windows-98_20220610_1953/Windows_98.png");
         background-repeat: no-repeat;
@@ -67,7 +73,9 @@
     </style>
   </head>
   <body>
+    <!-- Window -->
     <div id="small-window" class="window active glass">
+      <!-- Title bar -->
       <div class="title-bar">
         <div class="title-bar-text">Szegedi Tudományegyetem / Természettudományi és Informatikai Kar</div>
         <div class="title-bar-controls">
@@ -77,6 +85,7 @@
         </div>
       </div>
       <div class="window-body has-space">
+        <!-- Tabs -->
         <section class="tabs">
           <menu role="tablist" aria-label="Courses">
             <li role="tab">Webfejlesztés alapjai</li>
@@ -85,6 +94,7 @@
           </menu>
           <section class="window" role="tabpanel" id="tab">
             <p>Kurzusműveletek</p>
+            <!-- Button -->
             <button class="default">Kurzus teljesítése</button>
           </section>
         </section>
@@ -101,6 +111,7 @@
       </div>
       <div class="window-body has-space">
         <p>5-ös betöltése...</p>
+        <!-- Progress Indicator -->
         <div class="progress-indicator segmented">
           <span class="progress-indicator-bar"></span>
         </div>

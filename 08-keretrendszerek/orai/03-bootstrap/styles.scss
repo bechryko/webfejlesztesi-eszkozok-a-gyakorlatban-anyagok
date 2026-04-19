@@ -1,3 +1,7 @@
+/* Sokszor az ember nem szeretné 100%-ban azokat a stílusokat használni, amiket egy keretrendszer biztosít. Ilyenkor érdemes a
+DevTools-ban megnézni, hogy adott stílus honnan származik, és ugyanazzal a selector-ral felülírni a stílusokat olyanra, amit
+használni szeretnénk. */
+
 $layout-switch-threshold: 1000px;
 
 :root {
@@ -48,6 +52,10 @@ h1 {
       text-align: justify;
       margin-top: var(--bs-alert-margin-bottom);
    }
+}
+
+.scores-table {
+   margin-top: 2rem;
 }
 
 table tr td {
