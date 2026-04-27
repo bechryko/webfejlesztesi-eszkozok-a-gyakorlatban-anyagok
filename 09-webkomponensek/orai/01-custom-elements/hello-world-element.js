@@ -8,7 +8,8 @@ class HelloWorldElement extends HTMLElement {
     /* Be lehet állítani az aktuális (<hello-world></hello-world>) elem belső HTML-jét, azaz ami
     majd megjelenjen a DOM-on. (Ez ebben a formában csak akkor működik, ha a HTML-en ez a script
     a "defer" attribútummal van ellátva.) */
-    this.innerHTML = `
+    // ajánlott extension JS szövegben lévő HTML kód szerkesztésére: pushqrdx.inline-html (a komment teszi lehetővé a formázást)
+    this.innerHTML = /* html */`
       <p>Hello World!</p>
     `;
 
@@ -16,7 +17,8 @@ class HelloWorldElement extends HTMLElement {
     metódusát használjuk, paraméterben a létrehozandó elem nevével (szelektor). */
     const styles = document.createElement("style");
     /* Style-nál nem innerHTML-t kell használni (nem HTML-t írunk), hanem szöveges tartalmat. */
-    styles.textContent = `
+    // az előbb említett extension-t CSS szerkesztésére is lehet használni
+    styles.textContent = /* css */`
       hello-world {
         display: block;
         padding: 2rem;

@@ -1,7 +1,7 @@
 /* Most, a HTML egyszerűbb megadása érdekében egy template elemet hozunk létre. Ennek beállítjuk,
 hogy mi legyen a belső HTML-e, majd ezt fogjuk sablonként használni saját HTML elemünkben. */
 const helloWorldElementTemplate = document.createElement("template");
-helloWorldElementTemplate.innerHTML = `
+helloWorldElementTemplate.innerHTML = /* html */`
   <style>
     /* A :host szelektort a Shadow DOM miatt tudjuk használni (lásd: később), hogyha egy style a
     Shadow DOM-ban van, akkor a :host szelektor a shadow root-ra fog utalni, ami az az elem, amihez

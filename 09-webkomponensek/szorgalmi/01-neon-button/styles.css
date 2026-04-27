@@ -23,6 +23,7 @@ button {
   text-shadow: 0 0 0.25em magenta;
   opacity: 0.1;
   transition: opacity 250ms ease;
+  user-select: none;
 
   &:focus-visible {
     outline: none;
@@ -48,5 +49,6 @@ button {
     filter: blur(1em);
     opacity: 0;
     transition: inherit;
+    pointer-events: none;
   }
 }

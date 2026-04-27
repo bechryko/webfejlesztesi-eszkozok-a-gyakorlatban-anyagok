@@ -1,5 +1,5 @@
 const helloWorldElementTemplate = document.createElement("template");
-helloWorldElementTemplate.innerHTML = `
+helloWorldElementTemplate.innerHTML = /* html */`
   <style>
     :host {
       display: block;
