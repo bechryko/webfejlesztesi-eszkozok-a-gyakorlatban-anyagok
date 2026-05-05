@@ -1,0 +1,25 @@
+/* Ezek a stílusok Chrome-specifikusak, tehát más böngészőkben (pl. Firefox) nincs hatásuk. Viszont mivel az Edge sok szempontból
+nagyon hasonlít a Chrome-ra (pl. böngészőmotor), ezért a stílusok ott is működni fognak. */
+
+.number-input {
+  /* A pseudo HTML attribútum miatt pseudo-selectorral lehet kiválasztani ezeket az elemeket. */
+  &::-webkit-inner-spin-button {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+.file-input {
+  &::-webkit-file-upload-button {
+    border: none;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 300ms ease;
+  }
+
+  &:hover::-webkit-file-upload-button {
+    background-color: aquamarine;
+  }
+}

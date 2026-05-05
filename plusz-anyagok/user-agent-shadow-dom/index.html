@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plusz anyagok - User agent shadow DOM</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- Sok beépített HTML elemnek vannak extra építőelemei, egyéb elemek, amik bele vannak ágyazva, és minden böngésző magának valósítja meg, saját kinézettel. (Ez az oka annak, hogy pl. egyes inputok vagy scrollbar máshogy néz ki különböző böngészőkön.) -->
+    <!-- DevTools beállításokban pipáld be a "User agent shadow DOM" beállítást, és ezután egyes elemeknek, pl az itt felsoroltaknak,
+    megjelenik a beágyazott shadow DOM-ja, amit meg lehet vizsgálni, és ezáltal némileg személyre lehet szabni. -->
+    <h1>Példa 1: number input</h1>
+    <input class="number-input" type="number" />
+    <h1>Példa 2: file input</h1>
+    <input class="file-input" type="file">
+    <h1>Példa 3: search input</h1>
+    <p>Lásd: 11-problemak-munkahelyrol\project-hot-drinks-db\src\drinks-overview-page\drinks-overview-page.scss 23. sor</p>
+  </body>
+</html>
